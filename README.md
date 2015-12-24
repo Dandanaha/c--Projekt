@@ -1,1 +1,3 @@
 # c--Projekt
+
+Hier sollte ein wenig was über das Pojekt drin stehen...
