@@ -8,9 +8,20 @@ namespace BookKatalogue.model
 {
     class CollectionItem
     {
-        public CollectionItem()
+        private string _name = "New Collection";
+        public string Name
         {
-
+            get { return _name; }
+            set { _name = value; }
         }
+
+        private int _bookCount = 0;
+        public int BookCount
+        {
+            get { return _bookCount; }
+            set { _bookCount = value; }
+        }
+
+        public CollectionItem() { }
     }
 }
