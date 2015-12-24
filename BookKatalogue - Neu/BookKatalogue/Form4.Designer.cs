@@ -474,7 +474,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(347, 7);
+            this.textBox1.Location = new System.Drawing.Point(371, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 27);
             this.textBox1.TabIndex = 8;
@@ -485,12 +485,12 @@
             this.pnlViewChange.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlViewChange.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlViewChange.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pnlViewChange.Controls.Add(this.radioButton1);
             this.pnlViewChange.Controls.Add(this.radioButton2);
             this.pnlViewChange.Location = new System.Drawing.Point(257, 0);
             this.pnlViewChange.Name = "pnlViewChange";
-            this.pnlViewChange.Size = new System.Drawing.Size(84, 40);
+            this.pnlViewChange.Size = new System.Drawing.Size(108, 40);
             this.pnlViewChange.TabIndex = 7;
             // 
             // radioButton1
@@ -501,7 +501,7 @@
             this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.radioButton1.Image = ((System.Drawing.Image)(resources.GetObject("radioButton1.Image")));
-            this.radioButton1.Location = new System.Drawing.Point(0, 3);
+            this.radioButton1.Location = new System.Drawing.Point(12, 3);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(35, 35);
@@ -517,7 +517,7 @@
             this.radioButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.radioButton2.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.radioButton2.Image = ((System.Drawing.Image)(resources.GetObject("radioButton2.Image")));
-            this.radioButton2.Location = new System.Drawing.Point(44, 3);
+            this.radioButton2.Location = new System.Drawing.Point(57, 3);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(35, 35);
@@ -584,6 +584,7 @@
             // 
             // bibForm
             // 
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1195, 599);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.DateimenuStrip);
