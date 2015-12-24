@@ -21,6 +21,7 @@ namespace BookKatalogue
         {
             bibForm bi = new bibForm();
             bi.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
