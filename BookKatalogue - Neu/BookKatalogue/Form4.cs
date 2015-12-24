@@ -117,5 +117,10 @@ namespace BookKatalogue
                 radioButton1.BackColor = Color.White;
             }
         }
+
+        private void bibForm_Leave(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
