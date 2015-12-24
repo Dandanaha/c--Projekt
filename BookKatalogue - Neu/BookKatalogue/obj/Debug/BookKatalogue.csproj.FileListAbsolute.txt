@@ -85,3 +85,16 @@ C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\De
 C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.csproj.GenerateResource.Cache
 C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\bin\Debug\BookKatalogue.exe
 C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\bin\Debug\BookKatalogue.pdb
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\bin\Debug\BookKatalogue.exe.config
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.exe
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.pdb
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\bin\Debug\BookKatalogue.exe
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\bin\Debug\BookKatalogue.pdb
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.Form1.resources
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.Form2.resources
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.Form3.resources
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.bibForm.resources
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.sammlungForm.resources
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.Properties.Resources.resources
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.csproj.GenerateResource.Cache
