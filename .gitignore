@@ -202,3 +202,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.pdb
+BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.exe
+*.pdb
