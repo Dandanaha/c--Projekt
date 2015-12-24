@@ -118,9 +118,5 @@ namespace BookKatalogue
             }
         }
 
-        private void bibForm_Leave(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

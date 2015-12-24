@@ -8,3 +8,5 @@ BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.pdb
 *.Cache
 BookKatalogue - Neu/BookKatalogue/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.pdb
+*.exe
+*.Cache

@@ -76,7 +76,7 @@
             this.pnlViewChange = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGVBuch = new System.Windows.Forms.DataGridView();
             this.Titel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,7 +89,7 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlViewChange.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVBuch)).BeginInit();
             this.SuspendLayout();
             // 
             // DateimenuStrip
@@ -386,7 +386,7 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.dGVBuch);
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(1195, 568);
             this.splitContainer1.SplitterDistance = 247;
@@ -525,28 +525,31 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dGVBuch
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dGVBuch.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dGVBuch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVBuch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGVBuch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGVBuch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dGVBuch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dGVBuch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dGVBuch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVBuch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Titel,
             this.Autor,
             this.ISBN});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 35;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(945, 523);
-            this.dataGridView1.TabIndex = 5;
+            this.dGVBuch.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dGVBuch.Location = new System.Drawing.Point(-1, 45);
+            this.dGVBuch.Name = "dGVBuch";
+            this.dGVBuch.RowTemplate.Height = 35;
+            this.dGVBuch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVBuch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dGVBuch.Size = new System.Drawing.Size(945, 523);
+            this.dGVBuch.TabIndex = 5;
             // 
             // Titel
             // 
@@ -588,7 +591,6 @@
             this.MainMenuStrip = this.DateimenuStrip;
             this.Name = "bibForm";
             this.Text = "Mein Buch Katalog";
-            this.Leave += new System.EventHandler(this.bibForm_Leave);
             this.DateimenuStrip.ResumeLayout(false);
             this.DateimenuStrip.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -601,7 +603,7 @@
             this.panel1.PerformLayout();
             this.pnlViewChange.ResumeLayout(false);
             this.pnlViewChange.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVBuch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,7 +659,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ListBox lbCollection;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVBuch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
