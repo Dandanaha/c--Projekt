@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-﻿﻿namespace BookKatalogue
-{
-    partial class bibForm
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-=======
 ﻿﻿﻿namespace BookKatalogue
 {
     partial class bibForm
@@ -61,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
->>>>>>> origin/master
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bibForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DateimenuStrip = new System.Windows.Forms.MenuStrip();
@@ -260,32 +227,32 @@
             this.kopierenToolStripMenuItem.Name = "kopierenToolStripMenuItem";
             this.kopierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.L)));
-            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.kopierenToolStripMenuItem.Text = "Bibliotheken";
             // 
             // ausschneidenToolStripMenuItem
             // 
             this.ausschneidenToolStripMenuItem.Name = "ausschneidenToolStripMenuItem";
-            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.ausschneidenToolStripMenuItem.Text = "Titelseite";
             // 
             // inhaltsverzeichnisToolStripMenuItem
             // 
             this.inhaltsverzeichnisToolStripMenuItem.Name = "inhaltsverzeichnisToolStripMenuItem";
-            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.inhaltsverzeichnisToolStripMenuItem.Text = "Inhaltsverzeichnis";
             // 
             // anfangToolStripMenuItem
             // 
             this.anfangToolStripMenuItem.Name = "anfangToolStripMenuItem";
-            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.anfangToolStripMenuItem.Text = "Anfang";
             // 
             // seiteOderPositionToolStripMenuItem
             // 
             this.seiteOderPositionToolStripMenuItem.Name = "seiteOderPositionToolStripMenuItem";
             this.seiteOderPositionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.seiteOderPositionToolStripMenuItem.Text = "Seite oder Position";
             // 
             // ansichtToolStripMenuItem
@@ -305,13 +272,13 @@
             // 
             this.suchenmodusToolStripMenuItem.Name = "suchenmodusToolStripMenuItem";
             this.suchenmodusToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.suchenmodusToolStripMenuItem.Text = "Vollbildmodus";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(215, 6);
             // 
             // seitenansichtsmodulToolStripMenuItem
             // 
@@ -321,7 +288,7 @@
             this.titleToolStripMenuItem});
             this.seitenansichtsmodulToolStripMenuItem.Name = "seitenansichtsmodulToolStripMenuItem";
             this.seitenansichtsmodulToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.seitenansichtsmodulToolStripMenuItem.Text = "sotieren nach";
             // 
             // aktuellistToolStrip
@@ -350,18 +317,18 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
             // 
             // geheZuLayoutToolStripMenuItem
             // 
             this.geheZuLayoutToolStripMenuItem.Name = "geheZuLayoutToolStripMenuItem";
-            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.geheZuLayoutToolStripMenuItem.Text = "zoom";
             // 
             // farbmodusToolStripMenuItem
             // 
             this.farbmodusToolStripMenuItem.Name = "farbmodusToolStripMenuItem";
-            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.farbmodusToolStripMenuItem.Text = "Farbmodus";
             // 
             // formatToolStripMenuItem
@@ -376,7 +343,7 @@
             // 
             this.LzToolStripMenuItem.Name = "LzToolStripMenuItem";
             this.LzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.LzToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.LzToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.LzToolStripMenuItem.Text = "Lesezeichen";
             // 
             // hilfeToolStripMenuItem
@@ -506,6 +473,7 @@
             this.textBox1.Size = new System.Drawing.Size(202, 27);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Suche ...";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // pnlViewChange
             // 
@@ -661,73 +629,6 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-<<<<<<< HEAD
-        }
-
-        #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ordnerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip DateimenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem SchließenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem GZToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kopierenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ausschneidenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ansichtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suchenmodusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seitenansichtsmodulToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem geheZuLayoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem formatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem LzToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem NsammoolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem SItoolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem inhaltsverzeichnisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anfangToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seiteOderPositionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aktuellistToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem autorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem titleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripMenuItem farbmodusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem infosZuBuchkatalogToolStripMenuItem;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListBox lbCollection;
-        private System.Windows.Forms.DataGridView dGVBuch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Titel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel pnlViewChange;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-    }    
-=======
         }
 
         #endregion
@@ -795,5 +696,4 @@
         private System.Windows.Forms.BindingSource bibFormBindingSource;
         private System.Windows.Forms.ListView lvCollection;
     }
->>>>>>> origin/master
 }
