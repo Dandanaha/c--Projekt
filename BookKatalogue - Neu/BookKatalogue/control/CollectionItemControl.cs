@@ -7,15 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BookKatalogue.model;
 
 namespace BookKatalogue.controll
 {
     public partial class CollectionItemControl : UserControl
     {
-        public CollectionItemControl()
+        private CollectionItem item = null;
+
+        public CollectionItemControl(CollectionItem item)
         {
+            this.item = item;        
             InitializeComponent();
-            //this.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top);
+        }
+
+
+        private void tbName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                tbName.ReadOnly = true;                
+                tbName.SelectionLength = 0;
+                tbName.Enabled = false;
+                item.Name = tbName.Text;
+            }                
         }
     }
 }
