@@ -21,19 +21,9 @@ namespace BookKatalogue
         public bibForm()
         {
             InitializeComponent();
-
             _bookCollection = new Collection();
-            //ColumnHeader header = new ColumnHeader();
-            //header.Width = lvCollection.Width - 5;
-            //header.Text = "";
-            //header.Name = "col1";
-            //header.Width = lvCollection.Width - 5;
-            //lvCollection.Columns.Add(header);
 
-            //lbCollection.DataSource = _bookCollection.GetCollection();
-            //lbCollection.DisplayMember = "Name";
-            //lbCollection.ValueMember = "BookCount";
-
+            AddNewCollectionItemControlToList("Alle", false);
         }
 
         private void suchLabel_Click(object sender, EventArgs e)
@@ -147,35 +137,69 @@ namespace BookKatalogue
 
 
         List<CollectionItemControl> cicList = new List<CollectionItemControl>();
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddCollection_Click(object sender, EventArgs e)
+        {
+            //Remove Focus
+            RemoveFocusOnAllCollectionItemControls();
+            AddNewCollectionItemControlToList("New Collection", true);
+        }
+
+        private void AddNewCollectionItemControlToList(string collectionName, bool isFocusOnItem = false)
         {
             CollectionItem item = new CollectionItem();
+            item.Name = collectionName;
             _bookCollection.AddCollectionItem(item);
-            
-            CollectionItemControl cic = new CollectionItemControl();
-
-            Label lblName = cic.Controls.Find("lblName", true)[0] as Label;
-            lblName.Text = item.Name;
+            CollectionItemControl cic = new CollectionItemControl(item);
+            TextBox tbName = cic.Controls.Find("tbName", true)[0] as TextBox;
+            tbName.Text = item.Name;
             Label lblBookCount = cic.Controls.Find("lblBookCount", true)[0] as Label;
             lblBookCount.Text = item.BookCount.ToString();
+            cic.Location = new Point(4, 4);            
+            cicList.Add(cic);
 
+            RepositionAllCollectionItemControls(cic);
+            pnlCollectionItem.Controls.Add(cic);
+            ResizeCollectionItems();
+            btnAddCollection.Text = "Sammlung hinzufügen (" + cicList.Count + ")";
+
+            //Set Focus 
+            if (isFocusOnItem)
+                SetFocusOnAllCollectionItemControls(tbName);
+            else
+                tbName.Enabled = false;
+        }
+
+        private void RepositionAllCollectionItemControls(CollectionItemControl cic)
+        {
             int height = cic.Height;
             int heightGap = 3;
             int totalHeight = height + heightGap;
+            
+            int y = cicList[0].Location.Y;
+            for (int i = 1; i < cicList.Count; i++)
+            {
+                Point controlPosition = new Point(4, 4 + y + totalHeight);
+                cicList[i].Location = controlPosition;
+                y += 4 + totalHeight;
+            }            
+        }
 
-            int controlCount = pnlCollectionItem.Controls.Count;
+        private void SetFocusOnAllCollectionItemControls(TextBox tbName)
+        {
+            tbName.Focus();
+            tbName.ReadOnly = false;
+            tbName.SelectAll();
+        }
 
-            Point controlPosition;
-            if (controlCount == 0)
-                controlPosition = new Point(4, 4);
-            else
-                controlPosition = new Point(4, 4 + controlCount * totalHeight);
-
-            cic.Location = controlPosition;
-            cicList.Add(cic);
-
-            pnlCollectionItem.Controls.Add(cic);
-            ResizeCollectionItems();
+        private void RemoveFocusOnAllCollectionItemControls()
+        {
+            foreach (CollectionItemControl ele in cicList)
+            {
+                TextBox eleTextBox = ele.Controls.Find("tbName", true)[0] as TextBox;
+                eleTextBox.ReadOnly = true;
+                eleTextBox.SelectionLength = 0;
+                eleTextBox.Enabled = false;
+            }
         }
 
         private void tsmiBeenden_Click(object sender, EventArgs e)
@@ -197,7 +221,6 @@ namespace BookKatalogue
             int scrollbarWidth = 0;
             if (pnlCollectionItem.VerticalScroll.Visible)
                 scrollbarWidth = 15;
-
 
             foreach (CollectionItemControl cic in cicList)
             {

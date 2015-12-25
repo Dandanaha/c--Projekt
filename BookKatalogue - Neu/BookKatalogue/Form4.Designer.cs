@@ -69,7 +69,7 @@
             this.infosZuBuchkatalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlCollectionItem = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddCollection = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -393,29 +393,29 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnAddCollection);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(282, 40);
             this.panel2.TabIndex = 10;
             // 
-            // button1
+            // btnAddCollection
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAddCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Location = new System.Drawing.Point(3, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Sammlung hinzufügen";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddCollection.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddCollection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddCollection.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddCollection.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCollection.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnAddCollection.Location = new System.Drawing.Point(3, 8);
+            this.btnAddCollection.Name = "btnAddCollection";
+            this.btnAddCollection.Size = new System.Drawing.Size(276, 25);
+            this.btnAddCollection.TabIndex = 2;
+            this.btnAddCollection.Text = "Sammlung hinzufügen";
+            this.btnAddCollection.UseVisualStyleBackColor = false;
+            this.btnAddCollection.Click += new System.EventHandler(this.btnAddCollection_Click);
             // 
             // panel1
             // 
@@ -669,7 +669,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddCollection;
         private System.Windows.Forms.BindingSource collectionBindingSource;
         private System.Windows.Forms.BindingSource bibFormBindingSource;
         private System.Windows.Forms.Panel pnlCollectionItem;

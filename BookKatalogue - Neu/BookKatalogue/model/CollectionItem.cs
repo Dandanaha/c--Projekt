@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookKatalogue.model
 {
-    class CollectionItem
+    public class CollectionItem
     {
         private string _name = "New Collection";
         public string Name
