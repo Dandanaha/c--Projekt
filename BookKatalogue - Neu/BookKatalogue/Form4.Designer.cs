@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿﻿namespace BookKatalogue
 {
     partial class bibForm
@@ -28,6 +29,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+=======
+﻿﻿﻿namespace BookKatalogue
+{
+    partial class bibForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+>>>>>>> origin/master
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bibForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DateimenuStrip = new System.Windows.Forms.MenuStrip();
@@ -69,7 +103,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.lbCollection = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -81,6 +114,9 @@
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lvCollection = new System.Windows.Forms.ListView();
+            this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -90,6 +126,8 @@
             this.panel1.SuspendLayout();
             this.pnlViewChange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVBuch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DateimenuStrip
@@ -379,8 +417,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lvCollection);
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
-            this.splitContainer1.Panel1.Controls.Add(this.lbCollection);
             // 
             // splitContainer1.Panel2
             // 
@@ -389,7 +427,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.dGVBuch);
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(1195, 568);
-            this.splitContainer1.SplitterDistance = 247;
+            this.splitContainer1.SplitterDistance = 275;
             this.splitContainer1.TabIndex = 4;
             // 
             // panel2
@@ -400,7 +438,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(241, 40);
+            this.panel2.Size = new System.Drawing.Size(269, 40);
             this.panel2.TabIndex = 10;
             // 
             // button1
@@ -415,22 +453,11 @@
             this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.button1.Location = new System.Drawing.Point(3, 8);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 25);
+            this.button1.Size = new System.Drawing.Size(263, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Sammlung hinzufügen";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lbCollection
-            // 
-            this.lbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbCollection.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbCollection.FormattingEnabled = true;
-            this.lbCollection.Location = new System.Drawing.Point(3, 42);
-            this.lbCollection.Name = "lbCollection";
-            this.lbCollection.Size = new System.Drawing.Size(241, 524);
-            this.lbCollection.TabIndex = 0;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -543,12 +570,12 @@
             this.Autor,
             this.ISBN});
             this.dGVBuch.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dGVBuch.Location = new System.Drawing.Point(-1, 45);
+            this.dGVBuch.Location = new System.Drawing.Point(3, 45);
             this.dGVBuch.Name = "dGVBuch";
             this.dGVBuch.RowTemplate.Height = 35;
             this.dGVBuch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dGVBuch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dGVBuch.Size = new System.Drawing.Size(945, 523);
+            this.dGVBuch.Size = new System.Drawing.Size(917, 523);
             this.dGVBuch.TabIndex = 5;
             // 
             // Titel
@@ -582,6 +609,30 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(3, 2);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
+            // lvCollection
+            // 
+            this.lvCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvCollection.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvCollection.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lvCollection.Location = new System.Drawing.Point(6, 42);
+            this.lvCollection.MultiSelect = false;
+            this.lvCollection.Name = "lvCollection";
+            this.lvCollection.ShowGroups = false;
+            this.lvCollection.Size = new System.Drawing.Size(266, 526);
+            this.lvCollection.TabIndex = 10;
+            this.lvCollection.UseCompatibleStateImageBehavior = false;
+            this.lvCollection.View = System.Windows.Forms.View.Details;
+            // 
+            // collectionBindingSource
+            // 
+            this.collectionBindingSource.DataSource = typeof(BookKatalogue.model.Collection);
+            // 
+            // bibFormBindingSource
+            // 
+            this.bibFormBindingSource.DataSource = typeof(BookKatalogue.bibForm);
+            // 
             // bibForm
             // 
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -605,9 +656,12 @@
             this.pnlViewChange.ResumeLayout(false);
             this.pnlViewChange.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVBuch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+<<<<<<< HEAD
         }
 
         #endregion
@@ -673,4 +727,73 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
     }    
+=======
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordnerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip DateimenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem SchließenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem GZToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kopierenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ausschneidenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ansichtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suchenmodusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seitenansichtsmodulToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem geheZuLayoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem LzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem NsammoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem SItoolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem inhaltsverzeichnisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anfangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seiteOderPositionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aktuellistToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem autorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem titleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem farbmodusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem infosZuBuchkatalogToolStripMenuItem;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dGVBuch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Titel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel pnlViewChange;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource collectionBindingSource;
+        private System.Windows.Forms.BindingSource bibFormBindingSource;
+        private System.Windows.Forms.ListView lvCollection;
+    }
+>>>>>>> origin/master
 }

@@ -23,5 +23,10 @@ namespace BookKatalogue.model
         }
 
         public CollectionItem() { }
+
+        public override string ToString()
+        {
+            return _name + "               " + _bookCount;
+        }
     }
 }
