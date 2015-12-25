@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BookKatalogue
 {
     public partial class bibForm : Form
@@ -160,6 +161,17 @@ namespace BookKatalogue
             //lvCollection.Items.Add(item);
 
             lvCollection.Refresh();
+        }
+
+
+        private void tsmiBeenden_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Möchten Sie wirklich das Programm verlassen?", "Warning",  MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (dialog == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        
         }
     }
 }

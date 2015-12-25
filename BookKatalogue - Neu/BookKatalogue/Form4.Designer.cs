@@ -68,6 +68,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.infosZuBuchkatalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lvCollection = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -81,7 +82,6 @@
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lvCollection = new System.Windows.Forms.ListView();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -209,6 +209,7 @@
             this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.toolStripMenuItem4.Size = new System.Drawing.Size(289, 22);
             this.toolStripMenuItem4.Text = "Beenden";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.tsmiBeenden_Click);
             // 
             // GZToolStripMenuItem
             // 
@@ -227,32 +228,32 @@
             this.kopierenToolStripMenuItem.Name = "kopierenToolStripMenuItem";
             this.kopierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.L)));
-            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.kopierenToolStripMenuItem.Text = "Bibliotheken";
             // 
             // ausschneidenToolStripMenuItem
             // 
             this.ausschneidenToolStripMenuItem.Name = "ausschneidenToolStripMenuItem";
-            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.ausschneidenToolStripMenuItem.Text = "Titelseite";
             // 
             // inhaltsverzeichnisToolStripMenuItem
             // 
             this.inhaltsverzeichnisToolStripMenuItem.Name = "inhaltsverzeichnisToolStripMenuItem";
-            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.inhaltsverzeichnisToolStripMenuItem.Text = "Inhaltsverzeichnis";
             // 
             // anfangToolStripMenuItem
             // 
             this.anfangToolStripMenuItem.Name = "anfangToolStripMenuItem";
-            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.anfangToolStripMenuItem.Text = "Anfang";
             // 
             // seiteOderPositionToolStripMenuItem
             // 
             this.seiteOderPositionToolStripMenuItem.Name = "seiteOderPositionToolStripMenuItem";
             this.seiteOderPositionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.seiteOderPositionToolStripMenuItem.Text = "Seite oder Position";
             // 
             // ansichtToolStripMenuItem
@@ -272,13 +273,13 @@
             // 
             this.suchenmodusToolStripMenuItem.Name = "suchenmodusToolStripMenuItem";
             this.suchenmodusToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.suchenmodusToolStripMenuItem.Text = "Vollbildmodus";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(210, 6);
             // 
             // seitenansichtsmodulToolStripMenuItem
             // 
@@ -288,7 +289,7 @@
             this.titleToolStripMenuItem});
             this.seitenansichtsmodulToolStripMenuItem.Name = "seitenansichtsmodulToolStripMenuItem";
             this.seitenansichtsmodulToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.seitenansichtsmodulToolStripMenuItem.Text = "sotieren nach";
             // 
             // aktuellistToolStrip
@@ -317,18 +318,18 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
             // 
             // geheZuLayoutToolStripMenuItem
             // 
             this.geheZuLayoutToolStripMenuItem.Name = "geheZuLayoutToolStripMenuItem";
-            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.geheZuLayoutToolStripMenuItem.Text = "zoom";
             // 
             // farbmodusToolStripMenuItem
             // 
             this.farbmodusToolStripMenuItem.Name = "farbmodusToolStripMenuItem";
-            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.farbmodusToolStripMenuItem.Text = "Farbmodus";
             // 
             // formatToolStripMenuItem
@@ -343,7 +344,7 @@
             // 
             this.LzToolStripMenuItem.Name = "LzToolStripMenuItem";
             this.LzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.LzToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.LzToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.LzToolStripMenuItem.Text = "Lesezeichen";
             // 
             // hilfeToolStripMenuItem
@@ -396,6 +397,22 @@
             this.splitContainer1.Size = new System.Drawing.Size(1195, 568);
             this.splitContainer1.SplitterDistance = 275;
             this.splitContainer1.TabIndex = 4;
+            // 
+            // lvCollection
+            // 
+            this.lvCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvCollection.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvCollection.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lvCollection.Location = new System.Drawing.Point(6, 42);
+            this.lvCollection.MultiSelect = false;
+            this.lvCollection.Name = "lvCollection";
+            this.lvCollection.ShowGroups = false;
+            this.lvCollection.Size = new System.Drawing.Size(266, 526);
+            this.lvCollection.TabIndex = 10;
+            this.lvCollection.UseCompatibleStateImageBehavior = false;
+            this.lvCollection.View = System.Windows.Forms.View.Details;
             // 
             // panel2
             // 
@@ -452,7 +469,7 @@
             "Autor",
             "kürzlich angezeigt",
             "Titel"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 7);
+            this.comboBox1.Location = new System.Drawing.Point(3, 6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(251, 27);
             this.comboBox1.TabIndex = 6;
@@ -576,22 +593,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(3, 2);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // lvCollection
-            // 
-            this.lvCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvCollection.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvCollection.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvCollection.Location = new System.Drawing.Point(6, 42);
-            this.lvCollection.MultiSelect = false;
-            this.lvCollection.Name = "lvCollection";
-            this.lvCollection.ShowGroups = false;
-            this.lvCollection.Size = new System.Drawing.Size(266, 526);
-            this.lvCollection.TabIndex = 10;
-            this.lvCollection.UseCompatibleStateImageBehavior = false;
-            this.lvCollection.View = System.Windows.Forms.View.Details;
             // 
             // collectionBindingSource
             // 
