@@ -218,3 +218,11 @@ FakesAssemblies/
 *.opt
 
 /BookKatalogue - Neu/BookKatalogue/bin/Debug
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/data
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe.config
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.pdb
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.vshost.exe
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.vshost.exe.config
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/data/users/Usernamedata.ls
+/BookKatalogue - Neu/BookKatalogue/bin/Debug/*.exe
