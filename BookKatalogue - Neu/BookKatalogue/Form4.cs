@@ -144,14 +144,21 @@ namespace BookKatalogue
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //CollectionItem item = new CollectionItem();
-            //_bookCollection.AddCollectionItem(item);
-            //lvCollection.Items.Add(item.ToString());
+            CollectionItem item = new CollectionItem();
+            _bookCollection.AddCollectionItem(item);
+            lvCollection.Items.Add(item.ToString());
 
-            CollectionItemControl item = new CollectionItemControl();
+           // CollectionItemControl item = new CollectionItemControl();
+            //Test 1
             //_bookCollection.AddCollectionItem(item);
-            lvCollection.Controls.Add(item);
             //lvCollection.Items.Add(item);
+
+            //Test 2 (geht so nicht...)
+            //lvCollection.Controls.Add(item);
+
+            //Test 3
+            //lvCollection.Items.Add(item);
+
             lvCollection.Refresh();
         }
     }
