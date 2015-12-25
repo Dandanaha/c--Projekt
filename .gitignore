@@ -217,36 +217,4 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
-<<<<<<< HEAD
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-*.pdb
-BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.exe
-*.pdb
-BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe
-BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.exe
-BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe
-*.pdb
-BookKatalogue - Neu/BookKatalogue/obj/Debug/DesignTimeResolveAssemblyReferences.cache
-*.suo
-BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe
-*.cs
-=======
-# Visual Studio LightSwitch build output
-**/*.HTMLClient/GeneratedArtifacts
-**/*.DesktopClient/GeneratedArtifacts
-**/*.DesktopClient/ModelManifest.xml
-**/*.Server/GeneratedArtifacts
-**/*.Server/ModelManifest.xml
-_Pvt_Extensions
-
-# Paket dependency manager
-.paket/paket.exe
-
-# FAKE - F# Make
-.fake/
->>>>>>> 4dd9cb664e368a8410c7e43df331264c061e376b
 /BookKatalogue - Neu/BookKatalogue/bin/Debug
