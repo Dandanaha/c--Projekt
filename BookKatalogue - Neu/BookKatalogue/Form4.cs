@@ -23,11 +23,13 @@ namespace BookKatalogue
             InitializeComponent();
 
             _bookCollection = new Collection();
-            ColumnHeader header = new ColumnHeader();
-            header.Text = "";
-            header.Name = "col1";
-            header.Width = lvCollection.Width - 5;
-            lvCollection.Columns.Add(header);
+            //ColumnHeader header = new ColumnHeader();
+            //header.Width = lvCollection.Width - 5;
+            //header.Text = "";
+            //header.Name = "col1";
+            //header.Width = lvCollection.Width - 5;
+            //lvCollection.Columns.Add(header);
+
             //lbCollection.DataSource = _bookCollection.GetCollection();
             //lbCollection.DisplayMember = "Name";
             //lbCollection.ValueMember = "BookCount";
@@ -143,24 +145,35 @@ namespace BookKatalogue
             }
         }
 
+
+        List<CollectionItemControl> cicList = new List<CollectionItemControl>();
         private void button1_Click(object sender, EventArgs e)
         {
             CollectionItem item = new CollectionItem();
             _bookCollection.AddCollectionItem(item);
-            lvCollection.Items.Add(item.ToString());
 
-           // CollectionItemControl item = new CollectionItemControl();
-            //Test 1
-            //_bookCollection.AddCollectionItem(item);
-            //lvCollection.Items.Add(item);
+            //ListViewItem lvi = new ListViewItem(item.Name);            
+            //lvi.SubItems.Add(item.BookCount.ToString());
 
-            //Test 2 (geht so nicht...)
-            //lvCollection.Controls.Add(item);
 
-            //Test 3
-            //lvCollection.Items.Add(item);
+            
+            CollectionItemControl cic = new CollectionItemControl();
+            int height = cic.Height;
+            int heightGap = 3;
+            int totalHeight = height + heightGap;
 
-            lvCollection.Refresh();
+            int controlCount = pnlCollectionItem.Controls.Count;
+
+            Point controlPosition;
+            if (controlCount == 0)
+                controlPosition = new Point(4, 4);
+            else
+                controlPosition = new Point(4, 4 + controlCount * totalHeight);
+
+            cic.Location = controlPosition;
+            cicList.Add(cic);
+
+            pnlCollectionItem.Controls.Add(cic);
         }
 
 
