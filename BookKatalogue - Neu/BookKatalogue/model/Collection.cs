@@ -17,14 +17,19 @@ namespace BookKatalogue.model
             
         }
 
-        public void AddCollection(CollectionItem item)
+        public void AddCollectionItem(CollectionItem item)
         {
             _collectionList.Add(item);
         }
 
-        public void RemoveCollection(CollectionItem item)
+        public void RemoveCollectionItem(CollectionItem item)
         {
             _collectionList.Remove(item);
+        }
+
+        public List<CollectionItem> GetCollection()
+        {
+            return _collectionList;
         }
 
         public void SaveCollection(string fileName)

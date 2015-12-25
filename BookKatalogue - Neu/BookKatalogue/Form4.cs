@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookKatalogue.controll;
+using BookKatalogue.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,15 +8,29 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;    
+using System.Windows.Forms;
 
 namespace BookKatalogue
 {
     public partial class bibForm : Form
     {
+
+        Collection _bookCollection;
+
         public bibForm()
         {
-            InitializeComponent();  
+            InitializeComponent();
+
+            _bookCollection = new Collection();
+            ColumnHeader header = new ColumnHeader();
+            header.Text = "";
+            header.Name = "col1";
+            header.Width = lvCollection.Width - 5;
+            lvCollection.Columns.Add(header);
+            //lbCollection.DataSource = _bookCollection.GetCollection();
+            //lbCollection.DisplayMember = "Name";
+            //lbCollection.ValueMember = "BookCount";
+
         }
 
         private void suchLabel_Click(object sender, EventArgs e)
@@ -124,6 +140,19 @@ namespace BookKatalogue
             {
                 textBox1.Text = "";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //CollectionItem item = new CollectionItem();
+            //_bookCollection.AddCollectionItem(item);
+            //lvCollection.Items.Add(item.ToString());
+
+            CollectionItemControl item = new CollectionItemControl();
+            //_bookCollection.AddCollectionItem(item);
+            lvCollection.Controls.Add(item);
+            //lvCollection.Items.Add(item);
+            lvCollection.Refresh();
         }
     }
 }

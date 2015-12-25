@@ -97,3 +97,4 @@ C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\De
 C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.csproj.GenerateResource.Cache
 C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.exe
 C:\Users\Da\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.pdb
+C:\Users\Christopher\Documents\GitHub\c--Projekt\BookKatalogue - Neu\BookKatalogue\obj\Debug\BookKatalogue.controll.CollectionItemControl.resources
