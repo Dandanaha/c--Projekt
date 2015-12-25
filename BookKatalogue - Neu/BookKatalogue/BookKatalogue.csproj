@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\BücherInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\BücherInfo.Designer.cs">
+      <DependentUpon>BücherInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\CollectionItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SHA1.cs" />
+    <EmbeddedResource Include="control\BücherInfo.resx">
+      <DependentUpon>BücherInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\CollectionItemControl.resx">
       <DependentUpon>CollectionItemControl.cs</DependentUpon>
     </EmbeddedResource>
