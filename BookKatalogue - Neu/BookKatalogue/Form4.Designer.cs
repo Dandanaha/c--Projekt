@@ -68,7 +68,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.infosZuBuchkatalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lvCollection = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlCollectionItem = new System.Windows.Forms.Panel();
@@ -399,22 +398,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(1195, 568);
             this.splitContainer1.SplitterDistance = 244;
             this.splitContainer1.TabIndex = 4;
-            // 
-            // lvCollection
-            // 
-            this.lvCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvCollection.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvCollection.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvCollection.Location = new System.Drawing.Point(6, 42);
-            this.lvCollection.MultiSelect = false;
-            this.lvCollection.Name = "lvCollection";
-            this.lvCollection.ShowGroups = false;
-            this.lvCollection.Size = new System.Drawing.Size(266, 526);
-            this.lvCollection.TabIndex = 10;
-            this.lvCollection.UseCompatibleStateImageBehavior = false;
-            this.lvCollection.View = System.Windows.Forms.View.Details;
             // 
             // panel2
             // 
