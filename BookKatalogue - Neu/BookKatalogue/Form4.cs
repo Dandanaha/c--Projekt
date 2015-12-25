@@ -151,13 +151,14 @@ namespace BookKatalogue
         {
             CollectionItem item = new CollectionItem();
             _bookCollection.AddCollectionItem(item);
-
-            //ListViewItem lvi = new ListViewItem(item.Name);            
-            //lvi.SubItems.Add(item.BookCount.ToString());
-
-
             
             CollectionItemControl cic = new CollectionItemControl();
+
+            Label lblName = cic.Controls.Find("lblName", true)[0] as Label;
+            lblName.Text = item.Name;
+            Label lblBookCount = cic.Controls.Find("lblBookCount", true)[0] as Label;
+            lblBookCount.Text = item.BookCount.ToString();
+
             int height = cic.Height;
             int heightGap = 3;
             int totalHeight = height + heightGap;
@@ -174,8 +175,8 @@ namespace BookKatalogue
             cicList.Add(cic);
 
             pnlCollectionItem.Controls.Add(cic);
+            ResizeCollectionItems();
         }
-
 
         private void tsmiBeenden_Click(object sender, EventArgs e)
         {
@@ -183,8 +184,25 @@ namespace BookKatalogue
             if (dialog == DialogResult.Yes)
             {
                 this.Close();
+            }        
+        }
+
+        private void pnlCollectionItem_SizeChanged(object sender, EventArgs e)
+        {
+            ResizeCollectionItems();
+        }
+
+        private void ResizeCollectionItems()
+        {
+            int scrollbarWidth = 0;
+            if (pnlCollectionItem.VerticalScroll.Visible)
+                scrollbarWidth = 15;
+
+
+            foreach (CollectionItemControl cic in cicList)
+            {
+                cic.Width = pnlCollectionItem.Width - 10 - scrollbarWidth;
             }
-        
         }
     }
 }
