@@ -210,3 +210,6 @@ BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.exe
 BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe
 *.pdb
 BookKatalogue - Neu/BookKatalogue/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.suo
+BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe
+*.cs
