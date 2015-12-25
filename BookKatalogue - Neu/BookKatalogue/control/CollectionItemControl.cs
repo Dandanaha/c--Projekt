@@ -15,6 +15,7 @@ namespace BookKatalogue.controll
         public CollectionItemControl()
         {
             InitializeComponent();
+            //this.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top);
         }
     }
 }

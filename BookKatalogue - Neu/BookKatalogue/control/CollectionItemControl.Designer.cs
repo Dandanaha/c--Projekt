@@ -28,42 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblBookCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblName
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Test";
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(3, 1);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(39, 19);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Test";
             // 
-            // label2
+            // lblBookCount
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(185, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
+            this.lblBookCount.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblBookCount.AutoSize = true;
+            this.lblBookCount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookCount.Location = new System.Drawing.Point(185, 1);
+            this.lblBookCount.Name = "lblBookCount";
+            this.lblBookCount.Size = new System.Drawing.Size(18, 19);
+            this.lblBookCount.TabIndex = 1;
+            this.lblBookCount.Text = "0";
             // 
             // CollectionItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblBookCount);
+            this.Controls.Add(this.lblName);
             this.Name = "CollectionItemControl";
-            this.Size = new System.Drawing.Size(206, 22);
+            this.Size = new System.Drawing.Size(206, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,7 +72,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblBookCount;
     }
 }
