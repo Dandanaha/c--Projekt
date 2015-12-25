@@ -201,6 +201,7 @@ namespace BookKatalogue
 
             foreach (CollectionItemControl cic in cicList)
             {
+                //blablubb
                 cic.Width = pnlCollectionItem.Width - 10 - scrollbarWidth;
             }
         }
