@@ -70,6 +70,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.pnlCollectionItem = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -81,7 +82,6 @@
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lvCollection = new System.Windows.Forms.ListView();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -379,12 +379,13 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 29);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.lvCollection);
+            this.splitContainer1.Panel1.Controls.Add(this.pnlCollectionItem);
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             // 
             // splitContainer1.Panel2
@@ -394,7 +395,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.dGVBuch);
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(1195, 568);
-            this.splitContainer1.SplitterDistance = 275;
+            this.splitContainer1.SplitterDistance = 244;
             this.splitContainer1.TabIndex = 4;
             // 
             // panel2
@@ -405,7 +406,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(269, 40);
+            this.panel2.Size = new System.Drawing.Size(238, 40);
             this.panel2.TabIndex = 10;
             // 
             // button1
@@ -420,11 +421,24 @@
             this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.button1.Location = new System.Drawing.Point(3, 8);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(263, 25);
+            this.button1.Size = new System.Drawing.Size(232, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Sammlung hinzufügen";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pnlCollectionItem
+            // 
+            this.pnlCollectionItem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCollectionItem.AutoScroll = true;
+            this.pnlCollectionItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnlCollectionItem.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlCollectionItem.Location = new System.Drawing.Point(3, 45);
+            this.pnlCollectionItem.Name = "pnlCollectionItem";
+            this.pnlCollectionItem.Size = new System.Drawing.Size(238, 523);
+            this.pnlCollectionItem.TabIndex = 10;
             // 
             // panel1
             // 
@@ -543,7 +557,7 @@
             this.dGVBuch.RowTemplate.Height = 35;
             this.dGVBuch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dGVBuch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dGVBuch.Size = new System.Drawing.Size(917, 523);
+            this.dGVBuch.Size = new System.Drawing.Size(948, 523);
             this.dGVBuch.TabIndex = 5;
             // 
             // Titel
@@ -576,22 +590,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(3, 2);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // lvCollection
-            // 
-            this.lvCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvCollection.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvCollection.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvCollection.Location = new System.Drawing.Point(6, 42);
-            this.lvCollection.MultiSelect = false;
-            this.lvCollection.Name = "lvCollection";
-            this.lvCollection.ShowGroups = false;
-            this.lvCollection.Size = new System.Drawing.Size(266, 526);
-            this.lvCollection.TabIndex = 10;
-            this.lvCollection.UseCompatibleStateImageBehavior = false;
-            this.lvCollection.View = System.Windows.Forms.View.Details;
             // 
             // collectionBindingSource
             // 
@@ -694,6 +692,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource collectionBindingSource;
         private System.Windows.Forms.BindingSource bibFormBindingSource;
-        private System.Windows.Forms.ListView lvCollection;
+        private System.Windows.Forms.Panel pnlCollectionItem;
     }
 }
