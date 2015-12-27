@@ -198,22 +198,19 @@ namespace BookKatalogue
             }
         }
 
-<<<<<<< HEAD
+
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";                     
+            openFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 AddBookForm abf = new AddBookForm();
                 abf.SetNewBookData(openFileDialog1.FileName, _bookCollection);
                 abf.Show();
                 ResizeCollectionItems();
-            }           
-=======
-        private void dGVBuch_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            }
 
->>>>>>> 1fbbccc2ce6c723bb35d5e3edc8b85815ea20471
         }
+
     }
 }

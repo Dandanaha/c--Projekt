@@ -538,8 +538,7 @@
             this.dGVBuch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dGVBuch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dGVBuch.Size = new System.Drawing.Size(901, 522);
-            this.dGVBuch.TabIndex = 5;
-            this.dGVBuch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVBuch_CellContentClick);
+            this.dGVBuch.TabIndex = 5;            
             // 
             // Titel
             // 
