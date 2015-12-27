@@ -202,30 +202,40 @@ namespace BookKatalogue
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            //AddBookForm abf = new AddBookForm();
-            //abf.SetNewBookData(this, _bookCollection);
-            //abf.Show();
+            AddBookForm abf = new AddBookForm();
+            abf.SetNewBookData(this, _bookCollection);
+            abf.Show();
 
 
             //############Test###########
-            Book book = new Book();
-            book.Title = "Test";
-            book.Author = "Dan";
-            book.Isbn = "1234.5678.9098.7654";
-            _bookCollection.GetCollection("Alle").AddBook(book);
+            //Book book = new Book();
+            //book.Title = "Test";
+            //book.Author = "Dan";
+            //book.Isbn = "1234.5678.9098.7654";
+            //_bookCollection.GetCollection("Alle").AddBook(book);
 
-            UpdateBookDataSource();
+            //UpdateBookDataSource();
             //###########################
-
+            
             ResizeCollectionItems();
         }
 
         private void bibForm_Load(object sender, EventArgs e)
         {
+            //ein paar bücher hinzufügen
+            for (int i = 0; i < 5; i++)
+            {
+                Book book = new Book();
+                book.Title = "Test " + i;
+                book.Author = "Dan";
+                book.Isbn = "1234.5678.9098.7654";
+                _bookCollection.GetCollection("Alle").AddBook(book);
+            }
+
             UpdateBookDataSource();
         }
 
-        private void UpdateBookDataSource()
+        public void UpdateBookDataSource()
         {
             BindingList<Book> bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
             BindingSource bsBook = new BindingSource(bindingList, null);
@@ -242,7 +252,7 @@ namespace BookKatalogue
             dgvBooks.Columns.Insert(0, checkBoxColumn);
             dgvBooks.Columns[0].Width = 18;
 
-            //dgvBooks.ReadOnly = false;
+            dgvBooks.ReadOnly = false;
             btnDeleteBook.Visible = true;
 
             foreach (DataGridViewColumn row in dgvBooks.Columns)
@@ -251,7 +261,6 @@ namespace BookKatalogue
                     row.ReadOnly = false;
                 else
                     row.ReadOnly = true;
-
             }
 
             dgvBooks.ReadOnly = false;
@@ -260,22 +269,30 @@ namespace BookKatalogue
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
+            string message = string.Empty;
             CollectionItem ci = _bookCollection.GetCollection("Alle");
 
+            List<string> deleteList = new List<string>();
             foreach (DataGridViewRow row in dgvBooks.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
                 if (isSelected)
                 {
                     // einige Zellen sind null...warum das?!?!?!?! --> meist die Hälfte der selektierten Items
-                    //if(row.Cells["Title"].Value != null)
+                    // Iterator Problem vermutlích! (wobei ich es auch mit ner for schleife probiert hatte)...nuja
+                    // jetzt hab ich ne löschliste verwendet!
+                    if(row.Cells["Title"].Value != null)
                     {
-                        // Buch löschen                        
-                        string bookTitle = row.Cells["Title"].Value.ToString();
-                        ci.RemoveBook(bookTitle);               
+                        deleteList.Add(row.Cells["Title"].Value.ToString()); 
                     }
                 }
             }
+
+            foreach(string bookName in deleteList)
+            {
+                ci.RemoveBook(bookName);
+            }
+            
             UpdateBookDataSource();
             ResizeCollectionItems();
         }

@@ -49,6 +49,7 @@ namespace BookKatalogue
             CollectionItem all = _bookCollection.GetCollection("Alle");
             all.AddBook(book);
             _parentForm.ResizeCollectionItems();
+            _parentForm.UpdateBookDataSource();
             
             this.Close();
         }
