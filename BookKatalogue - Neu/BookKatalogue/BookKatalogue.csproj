@@ -46,11 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="AddBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddBookForm.Designer.cs">
       <DependentUpon>AddBookForm.cs</DependentUpon>
+=======
+    <Compile Include="control\BücherInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\BücherInfo.Designer.cs">
+      <DependentUpon>BücherInfo.cs</DependentUpon>
+>>>>>>> 1fbbccc2ce6c723bb35d5e3edc8b85815ea20471
     </Compile>
     <Compile Include="control\CollectionItemControl.cs">
       <SubType>UserControl</SubType>
@@ -94,8 +102,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SHA1.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="control\BücherInfo.resx">
+      <DependentUpon>BücherInfo.cs</DependentUpon>
+>>>>>>> 1fbbccc2ce6c723bb35d5e3edc8b85815ea20471
     </EmbeddedResource>
     <EmbeddedResource Include="control\CollectionItemControl.resx">
       <DependentUpon>CollectionItemControl.cs</DependentUpon>

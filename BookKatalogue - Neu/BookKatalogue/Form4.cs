@@ -81,14 +81,18 @@ namespace BookKatalogue
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButton1.Checked)
+         
+
+            if (rbtnBücherInf.Checked)
             {
-                radioButton1.BackColor = Color.Red;
+                rbtnBücherInf.BackColor = Color.Red;
             }
             else
             {
-                radioButton1.BackColor = Color.White;
+                rbtnBücherInf.BackColor = Color.White;
             }
+
+            
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -194,6 +198,7 @@ namespace BookKatalogue
             }
         }
 
+<<<<<<< HEAD
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";                     
@@ -204,6 +209,11 @@ namespace BookKatalogue
                 abf.Show();
                 ResizeCollectionItems();
             }           
+=======
+        private void dGVBuch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+>>>>>>> 1fbbccc2ce6c723bb35d5e3edc8b85815ea20471
         }
     }
 }

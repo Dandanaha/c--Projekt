@@ -74,7 +74,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlViewChange = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbtnBücherInf = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.dGVBuch = new System.Windows.Forms.DataGridView();
             this.Titel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -228,32 +228,32 @@
             this.kopierenToolStripMenuItem.Name = "kopierenToolStripMenuItem";
             this.kopierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.L)));
-            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.kopierenToolStripMenuItem.Text = "Bibliotheken";
             // 
             // ausschneidenToolStripMenuItem
             // 
             this.ausschneidenToolStripMenuItem.Name = "ausschneidenToolStripMenuItem";
-            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.ausschneidenToolStripMenuItem.Text = "Titelseite";
             // 
             // inhaltsverzeichnisToolStripMenuItem
             // 
             this.inhaltsverzeichnisToolStripMenuItem.Name = "inhaltsverzeichnisToolStripMenuItem";
-            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.inhaltsverzeichnisToolStripMenuItem.Text = "Inhaltsverzeichnis";
             // 
             // anfangToolStripMenuItem
             // 
             this.anfangToolStripMenuItem.Name = "anfangToolStripMenuItem";
-            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.anfangToolStripMenuItem.Text = "Anfang";
             // 
             // seiteOderPositionToolStripMenuItem
             // 
             this.seiteOderPositionToolStripMenuItem.Name = "seiteOderPositionToolStripMenuItem";
             this.seiteOderPositionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.seiteOderPositionToolStripMenuItem.Text = "Seite oder Position";
             // 
             // ansichtToolStripMenuItem
@@ -273,13 +273,13 @@
             // 
             this.suchenmodusToolStripMenuItem.Name = "suchenmodusToolStripMenuItem";
             this.suchenmodusToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.suchenmodusToolStripMenuItem.Text = "Vollbildmodus";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(210, 6);
             // 
             // seitenansichtsmodulToolStripMenuItem
             // 
@@ -289,7 +289,7 @@
             this.titleToolStripMenuItem});
             this.seitenansichtsmodulToolStripMenuItem.Name = "seitenansichtsmodulToolStripMenuItem";
             this.seitenansichtsmodulToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.seitenansichtsmodulToolStripMenuItem.Text = "sotieren nach";
             // 
             // aktuellistToolStrip
@@ -318,18 +318,18 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
             // 
             // geheZuLayoutToolStripMenuItem
             // 
             this.geheZuLayoutToolStripMenuItem.Name = "geheZuLayoutToolStripMenuItem";
-            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.geheZuLayoutToolStripMenuItem.Text = "zoom";
             // 
             // farbmodusToolStripMenuItem
             // 
             this.farbmodusToolStripMenuItem.Name = "farbmodusToolStripMenuItem";
-            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.farbmodusToolStripMenuItem.Text = "Farbmodus";
             // 
             // formatToolStripMenuItem
@@ -344,7 +344,7 @@
             // 
             this.LzToolStripMenuItem.Name = "LzToolStripMenuItem";
             this.LzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.LzToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.LzToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.LzToolStripMenuItem.Text = "Lesezeichen";
             // 
             // hilfeToolStripMenuItem
@@ -475,29 +475,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlViewChange.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pnlViewChange.Controls.Add(this.radioButton1);
+            this.pnlViewChange.Controls.Add(this.rbtnBücherInf);
             this.pnlViewChange.Controls.Add(this.radioButton2);
             this.pnlViewChange.Location = new System.Drawing.Point(257, 0);
             this.pnlViewChange.Name = "pnlViewChange";
             this.pnlViewChange.Size = new System.Drawing.Size(324, 40);
             this.pnlViewChange.TabIndex = 7;
             // 
-            // radioButton1
+            // rbtnBücherInf
             // 
-            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.radioButton1.Image = ((System.Drawing.Image)(resources.GetObject("radioButton1.Image")));
-            this.radioButton1.Location = new System.Drawing.Point(12, 3);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(35, 35);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbtnBücherInf.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnBücherInf.AutoSize = true;
+            this.rbtnBücherInf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rbtnBücherInf.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rbtnBücherInf.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rbtnBücherInf.Image = ((System.Drawing.Image)(resources.GetObject("rbtnBücherInf.Image")));
+            this.rbtnBücherInf.Location = new System.Drawing.Point(12, 3);
+            this.rbtnBücherInf.Margin = new System.Windows.Forms.Padding(0);
+            this.rbtnBücherInf.Name = "rbtnBücherInf";
+            this.rbtnBücherInf.Size = new System.Drawing.Size(35, 35);
+            this.rbtnBücherInf.TabIndex = 1;
+            this.rbtnBücherInf.TabStop = true;
+            this.rbtnBücherInf.UseVisualStyleBackColor = true;
+            this.rbtnBücherInf.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -539,6 +539,7 @@
             this.dGVBuch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dGVBuch.Size = new System.Drawing.Size(901, 522);
             this.dGVBuch.TabIndex = 5;
+            this.dGVBuch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVBuch_CellContentClick);
             // 
             // Titel
             // 
@@ -681,7 +682,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlViewChange;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtnBücherInf;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
