@@ -8,9 +8,13 @@ using System.Xml.Serialization;
 
 namespace BookKatalogue.model
 {
-    class Collection
+    public class Collection
     {
         private List<CollectionItem> _collectionList = new List<CollectionItem>();
+        public List<CollectionItem> CollectionList
+        {
+            get { return _collectionList; }
+        }
 
         public Collection()
         {
@@ -27,9 +31,9 @@ namespace BookKatalogue.model
             _collectionList.Remove(item);
         }
 
-        public List<CollectionItem> GetCollection()
+        public CollectionItem GetCollection(string name)
         {
-            return _collectionList;
+            return _collectionList.Find(x => x.Name == name);
         }
 
         public void SaveCollection(string fileName)

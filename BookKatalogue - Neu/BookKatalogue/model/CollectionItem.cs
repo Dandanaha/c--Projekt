@@ -8,6 +8,13 @@ namespace BookKatalogue.model
 {
     public class CollectionItem
     {
+        private List<Book> _bookList = new List<Book>();
+        public List<Book> BookList
+        {
+            get { return _bookList; }
+            set { _bookList = value; }
+        }
+
         private string _name = "New Collection";
         public string Name
         {
@@ -24,9 +31,16 @@ namespace BookKatalogue.model
 
         public CollectionItem() { }
 
-        public override string ToString()
+        public void AddBook(Book book)
         {
-            return _name + "               " + _bookCount;
+            _bookList.Add(book);
+            _bookCount = _bookList.Count;
+        }
+
+        //TODO:
+        public void RemoveBook()
+        {
+
         }
     }
 }

@@ -26,42 +26,6 @@ namespace BookKatalogue
             AddNewCollectionItemControlToList("Alle", false);
         }
 
-        private void suchLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hauptfensterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog od = new OpenFileDialog();
@@ -226,7 +190,20 @@ namespace BookKatalogue
             {
                 //blablubb
                 cic.Width = pnlCollectionItem.Width - 10 - scrollbarWidth;
+                cic.RefreshBookCount();
             }
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";                     
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                AddBookForm abf = new AddBookForm();
+                abf.SetNewBookData(openFileDialog1.FileName, _bookCollection);
+                abf.Show();
+                ResizeCollectionItems();
+            }           
         }
     }
 }
