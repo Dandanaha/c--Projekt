@@ -82,6 +82,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.btnEditBooks = new System.Windows.Forms.Button();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -421,6 +423,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnDeleteBook);
+            this.panel1.Controls.Add(this.btnEditBooks);
             this.panel1.Controls.Add(this.btnAddBook);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.pnlViewChange);
@@ -568,10 +572,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBooks.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBooks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvBooks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvBooks.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvBooks.Location = new System.Drawing.Point(3, 45);
-            this.dgvBooks.MultiSelect = false;
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -582,6 +585,27 @@
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBooks.Size = new System.Drawing.Size(901, 522);
             this.dgvBooks.TabIndex = 5;
+            // 
+            // btnEditBooks
+            // 
+            this.btnEditBooks.Location = new System.Drawing.Point(713, 6);
+            this.btnEditBooks.Name = "btnEditBooks";
+            this.btnEditBooks.Size = new System.Drawing.Size(94, 27);
+            this.btnEditBooks.TabIndex = 10;
+            this.btnEditBooks.Text = "Bücher editieren";
+            this.btnEditBooks.UseVisualStyleBackColor = true;
+            this.btnEditBooks.Click += new System.EventHandler(this.btnEditBooks_Click);
+            // 
+            // btnDeleteBook
+            // 
+            this.btnDeleteBook.Location = new System.Drawing.Point(814, 6);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(75, 27);
+            this.btnDeleteBook.TabIndex = 11;
+            this.btnDeleteBook.Text = "löschen";
+            this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Visible = false;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
             // collectionBindingSource
             // 
@@ -680,6 +704,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnAddBook;
+        private System.Windows.Forms.Button btnEditBooks;
         private System.Windows.Forms.DataGridView dgvBooks;
+        private System.Windows.Forms.Button btnDeleteBook;
     }
 }

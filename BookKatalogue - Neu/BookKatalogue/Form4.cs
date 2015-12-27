@@ -231,5 +231,53 @@ namespace BookKatalogue
             BindingSource bsBook = new BindingSource(bindingList, null);
             dgvBooks.DataSource = bsBook;
         }
+
+        private void btnEditBooks_Click(object sender, EventArgs e)
+        {
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+            checkBoxColumn.HeaderText = "";
+            checkBoxColumn.Width = 30;
+            checkBoxColumn.Name = "checkBoxColumn";
+
+            dgvBooks.Columns.Insert(0, checkBoxColumn);
+            dgvBooks.Columns[0].Width = 18;
+
+            //dgvBooks.ReadOnly = false;
+            btnDeleteBook.Visible = true;
+
+            foreach (DataGridViewColumn row in dgvBooks.Columns)
+            {
+                if (row.GetType() == typeof(DataGridViewCheckBoxColumn))
+                    row.ReadOnly = false;
+                else
+                    row.ReadOnly = true;
+
+            }
+
+            dgvBooks.ReadOnly = false;
+            UpdateBookDataSource();                 
+        }
+
+        private void btnDeleteBook_Click(object sender, EventArgs e)
+        {
+            CollectionItem ci = _bookCollection.GetCollection("Alle");
+
+            foreach (DataGridViewRow row in dgvBooks.Rows)
+            {
+                bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+                if (isSelected)
+                {
+                    // einige Zellen sind null...warum das?!?!?!?! --> meist die Hälfte der selektierten Items
+                    //if(row.Cells["Title"].Value != null)
+                    {
+                        // Buch löschen                        
+                        string bookTitle = row.Cells["Title"].Value.ToString();
+                        ci.RemoveBook(bookTitle);               
+                    }
+                }
+            }
+            UpdateBookDataSource();
+            ResizeCollectionItems();
+        }
     }
 }

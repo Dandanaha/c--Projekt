@@ -38,9 +38,14 @@ namespace BookKatalogue.model
         }
 
         //TODO:
-        public void RemoveBook()
+        public void RemoveBook(string name)
         {
-
+            Book book = _bookList.Find(x => x.Title == name);
+            if(book != null)
+            {
+                _bookList.Remove(book);
+                _bookCount = _bookList.Count;
+            }                
         }
     }
 }
