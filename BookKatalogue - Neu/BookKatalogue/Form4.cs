@@ -22,13 +22,7 @@ namespace BookKatalogue
         {
             InitializeComponent();
             _bookCollection = new Collection();
-
             AddNewCollectionItemControlToList("Alle", false);
-            var bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
-            var source = new BindingSource(bindingList, null);
-
-            //var source = new BindingSource(_bookCollection.GetCollection("Alle").BookList, null);
-            dgvBooks.DataSource = source;
         }
 
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -219,16 +213,23 @@ namespace BookKatalogue
             book.Author = "Dan";
             book.Isbn = "1234.5678.9098.7654";
             _bookCollection.GetCollection("Alle").AddBook(book);
-            
-            // warum muss ichj das immer wieder binden???
-            var bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
-            var source = new BindingSource(bindingList, null);            
-            dgvBooks.DataSource = source;
 
+            UpdateBookDataSource();
             //###########################
 
             ResizeCollectionItems();
         }
 
+        private void bibForm_Load(object sender, EventArgs e)
+        {
+            UpdateBookDataSource();
+        }
+
+        private void UpdateBookDataSource()
+        {
+            BindingList<Book> bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
+            BindingSource bsBook = new BindingSource(bindingList, null);
+            dgvBooks.DataSource = bsBook;
+        }
     }
 }
