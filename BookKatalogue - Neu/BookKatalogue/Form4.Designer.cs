@@ -423,7 +423,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnAddBook);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pnlViewChange);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -432,7 +431,7 @@
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(587, 9);
+            this.btnAddBook.Location = new System.Drawing.Point(587, 6);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(106, 27);
             this.btnAddBook.TabIndex = 9;
@@ -470,7 +469,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(371, 9);
+            this.textBox1.Location = new System.Drawing.Point(105, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 27);
             this.textBox1.TabIndex = 8;
@@ -485,6 +484,7 @@
             this.pnlViewChange.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pnlViewChange.Controls.Add(this.rbtnBücherInf);
             this.pnlViewChange.Controls.Add(this.radioButton2);
+            this.pnlViewChange.Controls.Add(this.textBox1);
             this.pnlViewChange.Location = new System.Drawing.Point(257, 0);
             this.pnlViewChange.Name = "pnlViewChange";
             this.pnlViewChange.Size = new System.Drawing.Size(324, 40);
@@ -607,7 +607,6 @@
             this.DateimenuStrip.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.pnlViewChange.ResumeLayout(false);
             this.pnlViewChange.PerformLayout();
             this.panel3.ResumeLayout(false);
