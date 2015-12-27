@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bibForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DateimenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,28 +72,24 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddCollection = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddBook = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlViewChange = new System.Windows.Forms.Panel();
             this.rbtnBücherInf = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.dGVBuch = new System.Windows.Forms.DataGridView();
-            this.Titel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAddBook = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.DateimenuStrip.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlViewChange.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVBuch)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -228,32 +225,32 @@
             this.kopierenToolStripMenuItem.Name = "kopierenToolStripMenuItem";
             this.kopierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.L)));
-            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.kopierenToolStripMenuItem.Text = "Bibliotheken";
             // 
             // ausschneidenToolStripMenuItem
             // 
             this.ausschneidenToolStripMenuItem.Name = "ausschneidenToolStripMenuItem";
-            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.ausschneidenToolStripMenuItem.Text = "Titelseite";
             // 
             // inhaltsverzeichnisToolStripMenuItem
             // 
             this.inhaltsverzeichnisToolStripMenuItem.Name = "inhaltsverzeichnisToolStripMenuItem";
-            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.inhaltsverzeichnisToolStripMenuItem.Text = "Inhaltsverzeichnis";
             // 
             // anfangToolStripMenuItem
             // 
             this.anfangToolStripMenuItem.Name = "anfangToolStripMenuItem";
-            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.anfangToolStripMenuItem.Text = "Anfang";
             // 
             // seiteOderPositionToolStripMenuItem
             // 
             this.seiteOderPositionToolStripMenuItem.Name = "seiteOderPositionToolStripMenuItem";
             this.seiteOderPositionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.seiteOderPositionToolStripMenuItem.Text = "Seite oder Position";
             // 
             // ansichtToolStripMenuItem
@@ -273,13 +270,13 @@
             // 
             this.suchenmodusToolStripMenuItem.Name = "suchenmodusToolStripMenuItem";
             this.suchenmodusToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.suchenmodusToolStripMenuItem.Text = "Vollbildmodus";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(215, 6);
             // 
             // seitenansichtsmodulToolStripMenuItem
             // 
@@ -289,7 +286,7 @@
             this.titleToolStripMenuItem});
             this.seitenansichtsmodulToolStripMenuItem.Name = "seitenansichtsmodulToolStripMenuItem";
             this.seitenansichtsmodulToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.seitenansichtsmodulToolStripMenuItem.Text = "sotieren nach";
             // 
             // aktuellistToolStrip
@@ -318,18 +315,18 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
             // 
             // geheZuLayoutToolStripMenuItem
             // 
             this.geheZuLayoutToolStripMenuItem.Name = "geheZuLayoutToolStripMenuItem";
-            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.geheZuLayoutToolStripMenuItem.Text = "zoom";
             // 
             // farbmodusToolStripMenuItem
             // 
             this.farbmodusToolStripMenuItem.Name = "farbmodusToolStripMenuItem";
-            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.farbmodusToolStripMenuItem.Text = "Farbmodus";
             // 
             // formatToolStripMenuItem
@@ -344,7 +341,7 @@
             // 
             this.LzToolStripMenuItem.Name = "LzToolStripMenuItem";
             this.LzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.LzToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.LzToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.LzToolStripMenuItem.Text = "Lesezeichen";
             // 
             // hilfeToolStripMenuItem
@@ -432,6 +429,16 @@
             this.panel1.Size = new System.Drawing.Size(901, 40);
             this.panel1.TabIndex = 9;
             // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Location = new System.Drawing.Point(587, 9);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(106, 27);
+            this.btnAddBook.TabIndex = 9;
+            this.btnAddBook.Text = "Buch hinzufügen";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.AllowDrop = true;
@@ -514,47 +521,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // dGVBuch
-            // 
-            this.dGVBuch.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dGVBuch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dGVBuch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dGVBuch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGVBuch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dGVBuch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dGVBuch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dGVBuch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVBuch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Titel,
-            this.Autor,
-            this.ISBN});
-            this.dGVBuch.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dGVBuch.Location = new System.Drawing.Point(3, 45);
-            this.dGVBuch.Name = "dGVBuch";
-            this.dGVBuch.RowTemplate.Height = 35;
-            this.dGVBuch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVBuch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dGVBuch.Size = new System.Drawing.Size(901, 522);
-            this.dGVBuch.TabIndex = 5;            
-            // 
-            // Titel
-            // 
-            this.Titel.HeaderText = "Titel";
-            this.Titel.Name = "Titel";
-            // 
-            // Autor
-            // 
-            this.Autor.HeaderText = "Autor";
-            this.Autor.Name = "Autor";
-            // 
-            // ISBN
-            // 
-            this.ISBN.HeaderText = "ISBN";
-            this.ISBN.Name = "ISBN";
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -571,12 +537,40 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.dGVBuch);
+            this.panel4.Controls.Add(this.dgvBooks);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Location = new System.Drawing.Point(288, 29);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(907, 570);
             this.panel4.TabIndex = 6;
+            // 
+            // dgvBooks
+            // 
+            this.dgvBooks.AllowUserToAddRows = false;
+            this.dgvBooks.AllowUserToDeleteRows = false;
+            this.dgvBooks.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgvBooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvBooks.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dgvBooks.Location = new System.Drawing.Point(3, 45);
+            this.dgvBooks.MultiSelect = false;
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgvBooks.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBooks.RowTemplate.Height = 35;
+            this.dgvBooks.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvBooks.Size = new System.Drawing.Size(901, 522);
+            this.dgvBooks.TabIndex = 5;
             // 
             // collectionBindingSource
             // 
@@ -584,21 +578,7 @@
             // 
             // bibFormBindingSource
             // 
-            this.bibFormBindingSource.DataSource = typeof(BookKatalogue.bibForm);
-            // 
-            // btnAddBook
-            // 
-            this.btnAddBook.Location = new System.Drawing.Point(587, 9);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(106, 27);
-            this.btnAddBook.TabIndex = 9;
-            this.btnAddBook.Text = "Buch hinzufügen";
-            this.btnAddBook.UseVisualStyleBackColor = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.bibFormBindingSource.DataSource = typeof(BookKatalogue.model.Book);
             // 
             // bibForm
             // 
@@ -618,9 +598,9 @@
             this.panel1.PerformLayout();
             this.pnlViewChange.ResumeLayout(false);
             this.pnlViewChange.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVBuch)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -675,10 +655,6 @@
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem infosZuBuchkatalogToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dGVBuch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Titel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlViewChange;
         private System.Windows.Forms.RadioButton rbtnBücherInf;
@@ -693,6 +669,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridView dgvBooks;
     }
 }

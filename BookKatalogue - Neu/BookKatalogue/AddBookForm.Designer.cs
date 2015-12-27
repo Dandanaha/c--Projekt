@@ -38,6 +38,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.tbPath = new System.Windows.Forms.TextBox();
             this.lblPath = new System.Windows.Forms.Label();
+            this.btnSelectPdf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbTitel
@@ -45,7 +46,7 @@
             this.tbTitel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbTitel.Location = new System.Drawing.Point(21, 41);
+            this.tbTitel.Location = new System.Drawing.Point(12, 111);
             this.tbTitel.Name = "tbTitel";
             this.tbTitel.Size = new System.Drawing.Size(514, 20);
             this.tbTitel.TabIndex = 0;
@@ -56,7 +57,7 @@
             this.tbAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbAuthor.Location = new System.Drawing.Point(21, 89);
+            this.tbAuthor.Location = new System.Drawing.Point(12, 159);
             this.tbAuthor.Name = "tbAuthor";
             this.tbAuthor.Size = new System.Drawing.Size(514, 20);
             this.tbAuthor.TabIndex = 1;
@@ -67,7 +68,7 @@
             this.tbIsbn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbIsbn.Location = new System.Drawing.Point(21, 141);
+            this.tbIsbn.Location = new System.Drawing.Point(12, 211);
             this.tbIsbn.Name = "tbIsbn";
             this.tbIsbn.Size = new System.Drawing.Size(514, 20);
             this.tbIsbn.TabIndex = 2;
@@ -76,7 +77,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(18, 25);
+            this.lblTitle.Location = new System.Drawing.Point(9, 95);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(27, 13);
             this.lblTitle.TabIndex = 3;
@@ -85,7 +86,7 @@
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(18, 73);
+            this.lblAuthor.Location = new System.Drawing.Point(9, 143);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(32, 13);
             this.lblAuthor.TabIndex = 4;
@@ -94,7 +95,7 @@
             // lblIsbn
             // 
             this.lblIsbn.AutoSize = true;
-            this.lblIsbn.Location = new System.Drawing.Point(18, 125);
+            this.lblIsbn.Location = new System.Drawing.Point(9, 195);
             this.lblIsbn.Name = "lblIsbn";
             this.lblIsbn.Size = new System.Drawing.Size(32, 13);
             this.lblIsbn.TabIndex = 5;
@@ -103,7 +104,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Location = new System.Drawing.Point(366, 232);
+            this.btnOk.Location = new System.Drawing.Point(366, 260);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 6;
@@ -114,7 +115,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(460, 232);
+            this.btnCancel.Location = new System.Drawing.Point(460, 260);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 7;
@@ -128,25 +129,37 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPath.Enabled = false;
-            this.tbPath.Location = new System.Drawing.Point(21, 196);
+            this.tbPath.Location = new System.Drawing.Point(12, 63);
             this.tbPath.Name = "tbPath";
             this.tbPath.Size = new System.Drawing.Size(514, 20);
             this.tbPath.TabIndex = 8;
+            this.tbPath.Text = "Pfad...";
             // 
             // lblPath
             // 
             this.lblPath.AutoSize = true;
-            this.lblPath.Location = new System.Drawing.Point(18, 180);
+            this.lblPath.Location = new System.Drawing.Point(9, 47);
             this.lblPath.Name = "lblPath";
             this.lblPath.Size = new System.Drawing.Size(29, 13);
             this.lblPath.TabIndex = 9;
             this.lblPath.Text = "Pfad";
             // 
+            // btnSelectPdf
+            // 
+            this.btnSelectPdf.Location = new System.Drawing.Point(12, 12);
+            this.btnSelectPdf.Name = "btnSelectPdf";
+            this.btnSelectPdf.Size = new System.Drawing.Size(102, 23);
+            this.btnSelectPdf.TabIndex = 10;
+            this.btnSelectPdf.Text = "PDF auswählen";
+            this.btnSelectPdf.UseVisualStyleBackColor = true;
+            this.btnSelectPdf.Click += new System.EventHandler(this.btnSelectPdf_Click);
+            // 
             // AddBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 267);
+            this.ClientSize = new System.Drawing.Size(550, 295);
+            this.Controls.Add(this.btnSelectPdf);
             this.Controls.Add(this.lblPath);
             this.Controls.Add(this.tbPath);
             this.Controls.Add(this.btnCancel);
@@ -176,5 +189,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox tbPath;
         private System.Windows.Forms.Label lblPath;
+        private System.Windows.Forms.Button btnSelectPdf;
     }
 }

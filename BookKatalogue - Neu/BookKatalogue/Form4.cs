@@ -24,6 +24,11 @@ namespace BookKatalogue
             _bookCollection = new Collection();
 
             AddNewCollectionItemControlToList("Alle", false);
+            var bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
+            var source = new BindingSource(bindingList, null);
+
+            //var source = new BindingSource(_bookCollection.GetCollection("Alle").BookList, null);
+            dgvBooks.DataSource = source;
         }
 
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -184,7 +189,7 @@ namespace BookKatalogue
             ResizeCollectionItems();
         }
 
-        private void ResizeCollectionItems()
+        public void ResizeCollectionItems()
         {
             int scrollbarWidth = 0;
             if (pnlCollectionItem.VerticalScroll.Visible)
@@ -196,20 +201,33 @@ namespace BookKatalogue
                 cic.Width = pnlCollectionItem.Width - 10 - scrollbarWidth;
                 cic.RefreshBookCount();
             }
+
+            dgvBooks.Refresh();            
         }
 
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                AddBookForm abf = new AddBookForm();
-                abf.SetNewBookData(openFileDialog1.FileName, _bookCollection);
-                abf.Show();
-                ResizeCollectionItems();
-            }
+            //AddBookForm abf = new AddBookForm();
+            //abf.SetNewBookData(this, _bookCollection);
+            //abf.Show();
 
+
+            //############Test###########
+            Book book = new Book();
+            book.Title = "Test";
+            book.Author = "Dan";
+            book.Isbn = "1234.5678.9098.7654";
+            _bookCollection.GetCollection("Alle").AddBook(book);
+            
+            // warum muss ichj das immer wieder binden???
+            var bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
+            var source = new BindingSource(bindingList, null);            
+            dgvBooks.DataSource = source;
+
+            //###########################
+
+            ResizeCollectionItems();
         }
 
     }
