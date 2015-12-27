@@ -217,34 +217,16 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
-/BookKatalogue - Neu/BookKatalogue/bin/Debug
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/data
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.exe.config
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.pdb
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.vshost.exe
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/BookKatalogue.vshost.exe.config
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/data/users/Usernamedata.ls
-/BookKatalogue - Neu/BookKatalogue/bin/Debug/*.exe
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.bibForm.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.controll.CollectionItemControl.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.csproj.FileListAbsolute.txt
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.csproj.GenerateResource.Cache
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.exe
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.Form1.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.Form2.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.Form3.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.Form4.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.pdb
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.Properties.Resources.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.sammlungForm.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/DesignTimeResolveAssemblyReferences.cache
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.controll.CollectionItemControl.resources
-/BookKatalogue - Neu/BookKatalogue/obj/Debug/BookKatalogue.csproj.FileListAbsolute.txt
-/BookKatalogue - Neu/BookKatalogue/obj/Debug
-/BookKatalogue - Neu/BookKatalogue/obj/Debug
-/BookKatalogue - Neu/.vs
+# Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+
+# Paket dependency manager
+.paket/paket.exe
+
+# FAKE - F# Make
+.fake/
