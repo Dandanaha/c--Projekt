@@ -127,7 +127,8 @@ namespace BookKatalogue
             RepositionAllCollectionItemControls(cic);
             pnlCollectionItem.Controls.Add(cic);
             ResizeCollectionItems();
-            btnAddCollection.Text = "Sammlung hinzufügen (" + cicList.Count + ")";
+            int collectionCounter = cicList.Count - 1;
+            btnAddCollection.Text = "Sammlung hinzufügen (" + collectionCounter + ")";
 
             //Set Focus 
             if (isFocusOnItem)
@@ -245,6 +246,14 @@ namespace BookKatalogue
 
         private void cbBookEdit_CheckedChanged(object sender, EventArgs e)
         {
+            //TODO:
+            if(dgvBooks.SelectedRows.Count > 0)
+                dgvBooks.SelectedRows[0].Selected = false;
+            //foreach (DataGridViewRow row in dgvBooks.SelectedRows)
+            //{
+            //    row.Selected = false;
+            //}
+
             if (cbBookEdit.Checked)
             {
                 cbBookEdit.Text = "Abbrechen";
@@ -341,6 +350,8 @@ namespace BookKatalogue
                     return;
 
                 int i = e.RowIndex;
+                if (i == -1)
+                    return;
                 DataGridViewRow row = dgvBooks.Rows[i];
                 row.Cells["checkBoxColumn"].Value = !Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
             }
