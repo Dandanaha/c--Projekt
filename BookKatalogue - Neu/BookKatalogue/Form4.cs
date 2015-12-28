@@ -51,11 +51,11 @@ namespace BookKatalogue
             aktuellistToolStrip.Enabled = aktuellistToolStrip.Checked;
         }
 
-       /* private void Do_Checked()
-        {
-            aktuellistToolStrip.Enabled = aktuellistToolStrip.Checked;
-            autorToolStripMenuItem.Enabled = autorToolStripMenuItem.Checked;
-        } */
+        /* private void Do_Checked()
+         {
+             aktuellistToolStrip.Enabled = aktuellistToolStrip.Checked;
+             autorToolStripMenuItem.Enabled = autorToolStripMenuItem.Checked;
+         } */
 
         private void autorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -80,7 +80,7 @@ namespace BookKatalogue
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-         
+
 
             if (rbtnBücherInf.Checked)
             {
@@ -91,7 +91,7 @@ namespace BookKatalogue
                 rbtnBücherInf.BackColor = Color.White;
             }
 
-            
+
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace BookKatalogue
             tbName.Text = item.Name;
             Label lblBookCount = cic.Controls.Find("lblBookCount", true)[0] as Label;
             lblBookCount.Text = item.BookCount.ToString();
-            cic.Location = new Point(4, 4);            
+            cic.Location = new Point(4, 4);
             cicList.Add(cic);
 
             RepositionAllCollectionItemControls(cic);
@@ -141,14 +141,14 @@ namespace BookKatalogue
             int height = cic.Height;
             int heightGap = 3;
             int totalHeight = height + heightGap;
-            
+
             int y = cicList[0].Location.Y;
             for (int i = 1; i < cicList.Count; i++)
             {
                 Point controlPosition = new Point(4, 4 + y + totalHeight);
                 cicList[i].Location = controlPosition;
                 y += 4 + totalHeight;
-            }            
+            }
         }
 
         private void SetFocusOnAllCollectionItemControls(TextBox tbName)
@@ -171,11 +171,11 @@ namespace BookKatalogue
 
         private void tsmiBeenden_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Möchten Sie wirklich das Programm verlassen?", "Warning",  MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult dialog = MessageBox.Show("Möchten Sie wirklich das Programm verlassen?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (dialog == DialogResult.Yes)
             {
                 this.Close();
-            }        
+            }
         }
 
         private void pnlCollectionItem_SizeChanged(object sender, EventArgs e)
@@ -196,7 +196,7 @@ namespace BookKatalogue
                 cic.RefreshBookCount();
             }
 
-            dgvBooks.Refresh();            
+            dgvBooks.Refresh();
         }
 
 
@@ -216,7 +216,7 @@ namespace BookKatalogue
 
             //UpdateBookDataSource();
             //###########################
-            
+
             ResizeCollectionItems();
         }
 
@@ -248,7 +248,7 @@ namespace BookKatalogue
             if (cbBookEdit.Checked)
             {
                 cbBookEdit.Text = "Abbrechen";
-                
+
                 DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
                 checkBoxColumn.HeaderText = "";
                 checkBoxColumn.Width = 30;
@@ -259,6 +259,7 @@ namespace BookKatalogue
 
                 dgvBooks.ReadOnly = false;
                 btnDeleteBook.Visible = true;
+                dgvBooks.MultiSelect = true;
 
                 foreach (DataGridViewColumn row in dgvBooks.Columns)
                 {
@@ -299,20 +300,50 @@ namespace BookKatalogue
                     // einige Zellen sind null...warum das?!?!?!?! --> meist die Hälfte der selektierten Items
                     // Iterator Problem vermutlích! (wobei ich es auch mit ner for schleife probiert hatte)...nuja
                     // jetzt hab ich ne löschliste verwendet!
-                    if(row.Cells["Title"].Value != null)
+                    if (row.Cells["Title"].Value != null)
                     {
-                        deleteList.Add(row.Cells["Title"].Value.ToString()); 
+                        deleteList.Add(row.Cells["Title"].Value.ToString());
                     }
                 }
             }
 
-            foreach(string bookName in deleteList)
+            foreach (string bookName in deleteList)
             {
                 ci.RemoveBook(bookName);
             }
-            
+
             UpdateBookDataSource();
             ResizeCollectionItems();
+        }
+
+        private void dgvBooks_SelectionChanged(object sender, EventArgs e)
+        {
+            // "Bücher editieren"-Modus
+            if (cbBookEdit.Checked)
+            {
+                if (dgvBooks.SelectedRows.Count < 2)
+                    return;
+
+                foreach (DataGridViewRow row in dgvBooks.SelectedRows)
+                {
+                    if (Convert.ToBoolean(row.Cells["checkBoxColumn"].Value) == false)
+                        row.Cells["checkBoxColumn"].Value = true;
+                }
+            }
+        }
+
+        private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // "Bücher editieren"-Modus
+            if (cbBookEdit.Checked)
+            {
+                if (dgvBooks.SelectedRows.Count > 1)
+                    return;
+
+                int i = e.RowIndex;
+                DataGridViewRow row = dgvBooks.Rows[i];
+                row.Cells["checkBoxColumn"].Value = !Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+            }
         }
     }
 }
