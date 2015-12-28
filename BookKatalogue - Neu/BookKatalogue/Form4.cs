@@ -233,6 +233,7 @@ namespace BookKatalogue
             }
 
             UpdateBookDataSource();
+            ResizeCollectionItems();
         }
 
         public void UpdateBookDataSource()
@@ -242,29 +243,46 @@ namespace BookKatalogue
             dgvBooks.DataSource = bsBook;
         }
 
-        private void btnEditBooks_Click(object sender, EventArgs e)
+        private void cbBookEdit_CheckedChanged(object sender, EventArgs e)
         {
-            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
-            checkBoxColumn.HeaderText = "";
-            checkBoxColumn.Width = 30;
-            checkBoxColumn.Name = "checkBoxColumn";
-
-            dgvBooks.Columns.Insert(0, checkBoxColumn);
-            dgvBooks.Columns[0].Width = 18;
-
-            dgvBooks.ReadOnly = false;
-            btnDeleteBook.Visible = true;
-
-            foreach (DataGridViewColumn row in dgvBooks.Columns)
+            if (cbBookEdit.Checked)
             {
-                if (row.GetType() == typeof(DataGridViewCheckBoxColumn))
-                    row.ReadOnly = false;
-                else
-                    row.ReadOnly = true;
-            }
+                cbBookEdit.Text = "Abbrechen";
+                
+                DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+                checkBoxColumn.HeaderText = "";
+                checkBoxColumn.Width = 30;
+                checkBoxColumn.Name = "checkBoxColumn";
 
-            dgvBooks.ReadOnly = false;
-            UpdateBookDataSource();                 
+                dgvBooks.Columns.Insert(0, checkBoxColumn);
+                dgvBooks.Columns[0].Width = 18;
+
+                dgvBooks.ReadOnly = false;
+                btnDeleteBook.Visible = true;
+
+                foreach (DataGridViewColumn row in dgvBooks.Columns)
+                {
+                    if (row.GetType() == typeof(DataGridViewCheckBoxColumn))
+                        row.ReadOnly = false;
+                    else
+                        row.ReadOnly = true;
+                }
+
+                dgvBooks.ReadOnly = false;
+                UpdateBookDataSource();
+            }
+            else
+            {
+                cbBookEdit.Text = "Bücher editieren";
+
+                if (dgvBooks.Columns[0].Name == "checkBoxColumn")
+                {
+                    dgvBooks.Columns.Remove("checkBoxColumn");
+                }
+
+                btnDeleteBook.Visible = false;
+                dgvBooks.MultiSelect = false;
+            }
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e)

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bibForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DateimenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.öffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,17 +73,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddCollection = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlViewChange = new System.Windows.Forms.Panel();
             this.rbtnBücherInf = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
-            this.btnEditBooks = new System.Windows.Forms.Button();
-            this.btnDeleteBook = new System.Windows.Forms.Button();
+            this.pnlBookEdit = new System.Windows.Forms.Panel();
+            this.cbBookEdit = new System.Windows.Forms.CheckBox();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -93,6 +94,7 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
+            this.pnlBookEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -423,15 +425,25 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnDeleteBook);
-            this.panel1.Controls.Add(this.btnEditBooks);
-            this.panel1.Controls.Add(this.btnAddBook);
+            this.panel1.Controls.Add(this.pnlBookEdit);
             this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.btnAddBook);
             this.panel1.Controls.Add(this.pnlViewChange);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(901, 40);
             this.panel1.TabIndex = 9;
+            // 
+            // btnDeleteBook
+            // 
+            this.btnDeleteBook.Location = new System.Drawing.Point(106, 6);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteBook.TabIndex = 11;
+            this.btnDeleteBook.Text = "löschen";
+            this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Visible = false;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
             // btnAddBook
             // 
@@ -463,22 +475,6 @@
             this.comboBox1.Size = new System.Drawing.Size(251, 27);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.Text = "Autor";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(105, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 27);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "Suche ...";
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // pnlViewChange
             // 
@@ -526,6 +522,22 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBox1.Location = new System.Drawing.Point(105, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(202, 27);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "Suche ...";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -554,8 +566,8 @@
             this.dgvBooks.AllowUserToAddRows = false;
             this.dgvBooks.AllowUserToDeleteRows = false;
             this.dgvBooks.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgvBooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgvBooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -564,21 +576,21 @@
             this.dgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvBooks.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBooks.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBooks.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBooks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvBooks.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvBooks.Location = new System.Drawing.Point(3, 45);
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dgvBooks.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgvBooks.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBooks.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dgvBooks.RowTemplate.Height = 35;
             this.dgvBooks.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -586,26 +598,27 @@
             this.dgvBooks.Size = new System.Drawing.Size(901, 522);
             this.dgvBooks.TabIndex = 5;
             // 
-            // btnEditBooks
+            // pnlBookEdit
             // 
-            this.btnEditBooks.Location = new System.Drawing.Point(713, 6);
-            this.btnEditBooks.Name = "btnEditBooks";
-            this.btnEditBooks.Size = new System.Drawing.Size(94, 27);
-            this.btnEditBooks.TabIndex = 10;
-            this.btnEditBooks.Text = "Bücher editieren";
-            this.btnEditBooks.UseVisualStyleBackColor = true;
-            this.btnEditBooks.Click += new System.EventHandler(this.btnEditBooks_Click);
+            this.pnlBookEdit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pnlBookEdit.Controls.Add(this.cbBookEdit);
+            this.pnlBookEdit.Controls.Add(this.btnDeleteBook);
+            this.pnlBookEdit.Location = new System.Drawing.Point(699, 2);
+            this.pnlBookEdit.Name = "pnlBookEdit";
+            this.pnlBookEdit.Size = new System.Drawing.Size(193, 34);
+            this.pnlBookEdit.TabIndex = 10;
             // 
-            // btnDeleteBook
+            // cbBookEdit
             // 
-            this.btnDeleteBook.Location = new System.Drawing.Point(814, 6);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(75, 27);
-            this.btnDeleteBook.TabIndex = 11;
-            this.btnDeleteBook.Text = "löschen";
-            this.btnDeleteBook.UseVisualStyleBackColor = true;
-            this.btnDeleteBook.Visible = false;
-            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
+            this.cbBookEdit.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbBookEdit.Location = new System.Drawing.Point(3, 6);
+            this.cbBookEdit.Name = "cbBookEdit";
+            this.cbBookEdit.Size = new System.Drawing.Size(97, 23);
+            this.cbBookEdit.TabIndex = 10;
+            this.cbBookEdit.Text = "Bücher editieren";
+            this.cbBookEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbBookEdit.UseVisualStyleBackColor = true;
+            this.cbBookEdit.CheckedChanged += new System.EventHandler(this.cbBookEdit_CheckedChanged);
             // 
             // collectionBindingSource
             // 
@@ -636,6 +649,7 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
+            this.pnlBookEdit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -704,8 +718,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.Button btnEditBooks;
         private System.Windows.Forms.DataGridView dgvBooks;
         private System.Windows.Forms.Button btnDeleteBook;
+        private System.Windows.Forms.Panel pnlBookEdit;
+        private System.Windows.Forms.CheckBox cbBookEdit;
     }
 }
