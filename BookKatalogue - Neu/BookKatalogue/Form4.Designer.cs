@@ -73,9 +73,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddCollection = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlBookEdit = new System.Windows.Forms.Panel();
+            this.cbBookEdit = new System.Windows.Forms.CheckBox();
             this.btnDeleteBook = new System.Windows.Forms.Button();
-            this.btnAddBook = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAddBook = new System.Windows.Forms.Button();
             this.pnlViewChange = new System.Windows.Forms.Panel();
             this.rbtnBücherInf = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -83,18 +85,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
-            this.pnlBookEdit = new System.Windows.Forms.Panel();
-            this.cbBookEdit = new System.Windows.Forms.CheckBox();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlBookEdit.SuspendLayout();
             this.pnlViewChange.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
-            this.pnlBookEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -230,32 +230,32 @@
             this.kopierenToolStripMenuItem.Name = "kopierenToolStripMenuItem";
             this.kopierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.L)));
-            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.kopierenToolStripMenuItem.Text = "Bibliotheken";
             // 
             // ausschneidenToolStripMenuItem
             // 
             this.ausschneidenToolStripMenuItem.Name = "ausschneidenToolStripMenuItem";
-            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.ausschneidenToolStripMenuItem.Text = "Titelseite";
             // 
             // inhaltsverzeichnisToolStripMenuItem
             // 
             this.inhaltsverzeichnisToolStripMenuItem.Name = "inhaltsverzeichnisToolStripMenuItem";
-            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.inhaltsverzeichnisToolStripMenuItem.Text = "Inhaltsverzeichnis";
             // 
             // anfangToolStripMenuItem
             // 
             this.anfangToolStripMenuItem.Name = "anfangToolStripMenuItem";
-            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.anfangToolStripMenuItem.Text = "Anfang";
             // 
             // seiteOderPositionToolStripMenuItem
             // 
             this.seiteOderPositionToolStripMenuItem.Name = "seiteOderPositionToolStripMenuItem";
             this.seiteOderPositionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.seiteOderPositionToolStripMenuItem.Text = "Seite oder Position";
             // 
             // ansichtToolStripMenuItem
@@ -275,13 +275,13 @@
             // 
             this.suchenmodusToolStripMenuItem.Name = "suchenmodusToolStripMenuItem";
             this.suchenmodusToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.suchenmodusToolStripMenuItem.Text = "Vollbildmodus";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(210, 6);
             // 
             // seitenansichtsmodulToolStripMenuItem
             // 
@@ -291,7 +291,7 @@
             this.titleToolStripMenuItem});
             this.seitenansichtsmodulToolStripMenuItem.Name = "seitenansichtsmodulToolStripMenuItem";
             this.seitenansichtsmodulToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.seitenansichtsmodulToolStripMenuItem.Text = "sotieren nach";
             // 
             // aktuellistToolStrip
@@ -320,18 +320,18 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
             // 
             // geheZuLayoutToolStripMenuItem
             // 
             this.geheZuLayoutToolStripMenuItem.Name = "geheZuLayoutToolStripMenuItem";
-            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.geheZuLayoutToolStripMenuItem.Text = "zoom";
             // 
             // farbmodusToolStripMenuItem
             // 
             this.farbmodusToolStripMenuItem.Name = "farbmodusToolStripMenuItem";
-            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.farbmodusToolStripMenuItem.Text = "Farbmodus";
             // 
             // formatToolStripMenuItem
@@ -346,7 +346,7 @@
             // 
             this.LzToolStripMenuItem.Name = "LzToolStripMenuItem";
             this.LzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.LzToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.LzToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.LzToolStripMenuItem.Text = "Lesezeichen";
             // 
             // hilfeToolStripMenuItem
@@ -434,6 +434,28 @@
             this.panel1.Size = new System.Drawing.Size(901, 40);
             this.panel1.TabIndex = 9;
             // 
+            // pnlBookEdit
+            // 
+            this.pnlBookEdit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pnlBookEdit.Controls.Add(this.cbBookEdit);
+            this.pnlBookEdit.Controls.Add(this.btnDeleteBook);
+            this.pnlBookEdit.Location = new System.Drawing.Point(630, 2);
+            this.pnlBookEdit.Name = "pnlBookEdit";
+            this.pnlBookEdit.Size = new System.Drawing.Size(268, 34);
+            this.pnlBookEdit.TabIndex = 10;
+            // 
+            // cbBookEdit
+            // 
+            this.cbBookEdit.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbBookEdit.Location = new System.Drawing.Point(6, 6);
+            this.cbBookEdit.Name = "cbBookEdit";
+            this.cbBookEdit.Size = new System.Drawing.Size(97, 23);
+            this.cbBookEdit.TabIndex = 10;
+            this.cbBookEdit.Text = "Bücher editieren";
+            this.cbBookEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbBookEdit.UseVisualStyleBackColor = true;
+            this.cbBookEdit.CheckedChanged += new System.EventHandler(this.cbBookEdit_CheckedChanged);
+            // 
             // btnDeleteBook
             // 
             this.btnDeleteBook.Location = new System.Drawing.Point(109, 6);
@@ -444,16 +466,6 @@
             this.btnDeleteBook.UseVisualStyleBackColor = true;
             this.btnDeleteBook.Visible = false;
             this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
-            // 
-            // btnAddBook
-            // 
-            this.btnAddBook.Location = new System.Drawing.Point(587, 6);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(106, 27);
-            this.btnAddBook.TabIndex = 9;
-            this.btnAddBook.Text = "Buch hinzufügen";
-            this.btnAddBook.UseVisualStyleBackColor = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // comboBox1
             // 
@@ -472,9 +484,19 @@
             "Titel"});
             this.comboBox1.Location = new System.Drawing.Point(3, 6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(251, 27);
+            this.comboBox1.Size = new System.Drawing.Size(179, 27);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.Text = "Autor";
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Location = new System.Drawing.Point(518, 6);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(106, 27);
+            this.btnAddBook.TabIndex = 9;
+            this.btnAddBook.Text = "Buch hinzufügen";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // pnlViewChange
             // 
@@ -485,7 +507,7 @@
             this.pnlViewChange.Controls.Add(this.rbtnBücherInf);
             this.pnlViewChange.Controls.Add(this.radioButton2);
             this.pnlViewChange.Controls.Add(this.textBox1);
-            this.pnlViewChange.Location = new System.Drawing.Point(257, 0);
+            this.pnlViewChange.Location = new System.Drawing.Point(188, 0);
             this.pnlViewChange.Name = "pnlViewChange";
             this.pnlViewChange.Size = new System.Drawing.Size(324, 40);
             this.pnlViewChange.TabIndex = 7;
@@ -601,28 +623,6 @@
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
             // 
-            // pnlBookEdit
-            // 
-            this.pnlBookEdit.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.pnlBookEdit.Controls.Add(this.cbBookEdit);
-            this.pnlBookEdit.Controls.Add(this.btnDeleteBook);
-            this.pnlBookEdit.Location = new System.Drawing.Point(699, 2);
-            this.pnlBookEdit.Name = "pnlBookEdit";
-            this.pnlBookEdit.Size = new System.Drawing.Size(193, 34);
-            this.pnlBookEdit.TabIndex = 10;
-            // 
-            // cbBookEdit
-            // 
-            this.cbBookEdit.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbBookEdit.Location = new System.Drawing.Point(6, 6);
-            this.cbBookEdit.Name = "cbBookEdit";
-            this.cbBookEdit.Size = new System.Drawing.Size(97, 23);
-            this.cbBookEdit.TabIndex = 10;
-            this.cbBookEdit.Text = "Bücher editieren";
-            this.cbBookEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cbBookEdit.UseVisualStyleBackColor = true;
-            this.cbBookEdit.CheckedChanged += new System.EventHandler(this.cbBookEdit_CheckedChanged);
-            // 
             // collectionBindingSource
             // 
             this.collectionBindingSource.DataSource = typeof(BookKatalogue.model.Collection);
@@ -647,12 +647,12 @@
             this.DateimenuStrip.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.pnlBookEdit.ResumeLayout(false);
             this.pnlViewChange.ResumeLayout(false);
             this.pnlViewChange.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
-            this.pnlBookEdit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.collectionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibFormBindingSource)).EndInit();
             this.ResumeLayout(false);
