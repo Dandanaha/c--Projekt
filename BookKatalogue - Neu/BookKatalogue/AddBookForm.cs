@@ -46,6 +46,7 @@ namespace BookKatalogue
             book.Title = tbTitel.Text;
             book.Author = tbAuthor.Text;
             book.Isbn = tbIsbn.Text;
+            book.Path = tbPath.Text;
             CollectionItem all = _bookCollection.GetCollection("Alle");
             all.AddBook(book);
             _parentForm.ResizeCollectionItems();

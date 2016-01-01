@@ -230,6 +230,7 @@ namespace BookKatalogue
                 book.Title = "Test " + i;
                 book.Author = "Dan";
                 book.Isbn = "1234.5678.9098.7654";
+                book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
                 _bookCollection.GetCollection("Alle").AddBook(book);
             }
 
@@ -242,6 +243,9 @@ namespace BookKatalogue
             BindingList<Book> bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
             BindingSource bsBook = new BindingSource(bindingList, null);
             dgvBooks.DataSource = bsBook;
+            // Spalte mit "Path" ausblenden! ... das sollte später aber via Column-Name implementiert werden.. sonst fällt einem das ewt. mal auf die Füße!
+            dgvBooks.Columns[dgvBooks.ColumnCount - 1].Visible = false;
+
         }
 
         private void cbBookEdit_CheckedChanged(object sender, EventArgs e)
@@ -355,6 +359,35 @@ namespace BookKatalogue
                 DataGridViewRow row = dgvBooks.Rows[i];
                 row.Cells["checkBoxColumn"].Value = !Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
             }
+        }
+
+        private void dgvBooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!cbBookEdit.Checked)
+            {
+                //if (dgvBooks.SelectedRows.Count == 1)
+                //    return;
+
+                int i = e.RowIndex;
+                if (i == -1)
+                    return;
+                DataGridViewRow row = dgvBooks.Rows[i];
+                //row.Cells["checkBoxColumn"].Value = !Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+
+
+                //Get current Collection
+                CollectionItem collection = _bookCollection.GetCollection("Alle");
+                Book selectedBook = collection.BookList[i];                
+                string bookPath = selectedBook.Path;
+
+                if (bookPath.Length == 0)
+                    return;
+
+                BookReaderForm brf = new BookReaderForm(bookPath);
+                brf.Show();
+            }
+
+           
         }
     }
 }

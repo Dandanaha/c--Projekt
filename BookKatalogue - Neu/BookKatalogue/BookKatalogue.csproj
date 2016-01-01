@@ -52,6 +52,12 @@
     <Compile Include="AddBookForm.Designer.cs">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookReaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookReaderForm.Designer.cs">
+      <DependentUpon>BookReaderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\CollectionItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="SHA1.cs" />
     <EmbeddedResource Include="AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookReaderForm.resx">
+      <DependentUpon>BookReaderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\CollectionItemControl.resx">
       <DependentUpon>CollectionItemControl.cs</DependentUpon>
@@ -145,6 +154,25 @@
     <Content Include="Cursor1.cur" />
     <Content Include="Icon1.ico" />
     <Content Include="view.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

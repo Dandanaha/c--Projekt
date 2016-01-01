@@ -230,32 +230,32 @@
             this.kopierenToolStripMenuItem.Name = "kopierenToolStripMenuItem";
             this.kopierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.L)));
-            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.kopierenToolStripMenuItem.Text = "Bibliotheken";
             // 
             // ausschneidenToolStripMenuItem
             // 
             this.ausschneidenToolStripMenuItem.Name = "ausschneidenToolStripMenuItem";
-            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.ausschneidenToolStripMenuItem.Text = "Titelseite";
             // 
             // inhaltsverzeichnisToolStripMenuItem
             // 
             this.inhaltsverzeichnisToolStripMenuItem.Name = "inhaltsverzeichnisToolStripMenuItem";
-            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.inhaltsverzeichnisToolStripMenuItem.Text = "Inhaltsverzeichnis";
             // 
             // anfangToolStripMenuItem
             // 
             this.anfangToolStripMenuItem.Name = "anfangToolStripMenuItem";
-            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.anfangToolStripMenuItem.Text = "Anfang";
             // 
             // seiteOderPositionToolStripMenuItem
             // 
             this.seiteOderPositionToolStripMenuItem.Name = "seiteOderPositionToolStripMenuItem";
             this.seiteOderPositionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.seiteOderPositionToolStripMenuItem.Text = "Seite oder Position";
             // 
             // ansichtToolStripMenuItem
@@ -275,13 +275,13 @@
             // 
             this.suchenmodusToolStripMenuItem.Name = "suchenmodusToolStripMenuItem";
             this.suchenmodusToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.suchenmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.suchenmodusToolStripMenuItem.Text = "Vollbildmodus";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(215, 6);
             // 
             // seitenansichtsmodulToolStripMenuItem
             // 
@@ -291,7 +291,7 @@
             this.titleToolStripMenuItem});
             this.seitenansichtsmodulToolStripMenuItem.Name = "seitenansichtsmodulToolStripMenuItem";
             this.seitenansichtsmodulToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.seitenansichtsmodulToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.seitenansichtsmodulToolStripMenuItem.Text = "sotieren nach";
             // 
             // aktuellistToolStrip
@@ -320,18 +320,18 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(215, 6);
             // 
             // geheZuLayoutToolStripMenuItem
             // 
             this.geheZuLayoutToolStripMenuItem.Name = "geheZuLayoutToolStripMenuItem";
-            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.geheZuLayoutToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.geheZuLayoutToolStripMenuItem.Text = "zoom";
             // 
             // farbmodusToolStripMenuItem
             // 
             this.farbmodusToolStripMenuItem.Name = "farbmodusToolStripMenuItem";
-            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.farbmodusToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.farbmodusToolStripMenuItem.Text = "Farbmodus";
             // 
             // formatToolStripMenuItem
@@ -346,7 +346,7 @@
             // 
             this.LzToolStripMenuItem.Name = "LzToolStripMenuItem";
             this.LzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.LzToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.LzToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.LzToolStripMenuItem.Text = "Lesezeichen";
             // 
             // hilfeToolStripMenuItem
@@ -621,6 +621,7 @@
             this.dgvBooks.Size = new System.Drawing.Size(901, 522);
             this.dgvBooks.TabIndex = 5;
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
+            this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
             // 
             // collectionBindingSource

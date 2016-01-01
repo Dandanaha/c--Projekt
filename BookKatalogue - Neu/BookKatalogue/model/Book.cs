@@ -29,6 +29,13 @@ namespace BookKatalogue.model
             set { _isbn = value; }
         }
 
+        private string _path;
+        public string Path
+        {
+            get { return _path; }
+            set { _path = value; }
+        }
+
         public Book() { }
 
     }
