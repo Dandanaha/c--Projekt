@@ -85,6 +85,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.btnMoveBook = new System.Windows.Forms.Button();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -437,6 +438,7 @@
             // pnlBookEdit
             // 
             this.pnlBookEdit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pnlBookEdit.Controls.Add(this.btnMoveBook);
             this.pnlBookEdit.Controls.Add(this.cbBookEdit);
             this.pnlBookEdit.Controls.Add(this.btnDeleteBook);
             this.pnlBookEdit.Location = new System.Drawing.Point(630, 2);
@@ -624,6 +626,17 @@
             this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
             // 
+            // btnMoveBook
+            // 
+            this.btnMoveBook.Location = new System.Drawing.Point(187, 6);
+            this.btnMoveBook.Name = "btnMoveBook";
+            this.btnMoveBook.Size = new System.Drawing.Size(75, 23);
+            this.btnMoveBook.TabIndex = 7;
+            this.btnMoveBook.Text = "move";
+            this.btnMoveBook.UseVisualStyleBackColor = true;
+            this.btnMoveBook.Visible = false;
+            this.btnMoveBook.Click += new System.EventHandler(this.btnMoveBook_Click);
+            // 
             // collectionBindingSource
             // 
             this.collectionBindingSource.DataSource = typeof(BookKatalogue.model.Collection);
@@ -726,5 +739,6 @@
         private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Panel pnlBookEdit;
         private System.Windows.Forms.CheckBox cbBookEdit;
+        private System.Windows.Forms.Button btnMoveBook;
     }
 }

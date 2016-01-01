@@ -47,10 +47,10 @@ namespace BookKatalogue
             book.Author = tbAuthor.Text;
             book.Isbn = tbIsbn.Text;
             book.Path = tbPath.Text;
-            CollectionItem all = _bookCollection.GetCollection("Alle");
+            CollectionItem all = _bookCollection.GetCollection(_parentForm._currentCollectionName);
             all.AddBook(book);
             _parentForm.ResizeCollectionItems();
-            _parentForm.UpdateBookDataSource();
+            _parentForm.UpdateBookDataSource(_parentForm._currentCollectionName); // später sollte das nen public "Getter" bekommen...
             
             this.Close();
         }

@@ -14,14 +14,15 @@ using System.Windows.Forms;
 namespace BookKatalogue
 {
     public partial class bibForm : Form
-    {
-
+    {       
         Collection _bookCollection;
+        public string _currentCollectionName = "Alle";
 
         public bibForm()
         {
             InitializeComponent();
-            _bookCollection = new Collection();
+            Collection bookCollection = new Collection();
+            _bookCollection = bookCollection;
             AddNewCollectionItemControlToList("Alle", false);
         }
 
@@ -122,6 +123,7 @@ namespace BookKatalogue
             Label lblBookCount = cic.Controls.Find("lblBookCount", true)[0] as Label;
             lblBookCount.Text = item.BookCount.ToString();
             cic.Location = new Point(4, 4);
+            cic.Click += new EventHandler(collectionItemControl_Click);
             cicList.Add(cic);
 
             RepositionAllCollectionItemControls(cic);
@@ -135,6 +137,17 @@ namespace BookKatalogue
                 SetFocusOnAllCollectionItemControls(tbName);
             else
                 tbName.Enabled = false;
+        }
+
+        private void collectionItemControl_Click(object sender, EventArgs e)
+        {
+            CollectionItemControl cic = sender as CollectionItemControl;
+            CollectionItem ci = cic.CollectionItem;
+            string collectionName = ci.Name;
+
+            _currentCollectionName = collectionName;
+            Console.WriteLine("Ich bin: " + collectionName);
+            UpdateBookDataSource(_currentCollectionName); // TEEEEEEEST
         }
 
         private void RepositionAllCollectionItemControls(CollectionItemControl cic)
@@ -213,7 +226,7 @@ namespace BookKatalogue
             //book.Title = "Test";
             //book.Author = "Dan";
             //book.Isbn = "1234.5678.9098.7654";
-            //_bookCollection.GetCollection("Alle").AddBook(book);
+            //_selectedColelction.GetCollection("Alle").AddBook(book);
 
             //UpdateBookDataSource();
             //###########################
@@ -234,18 +247,17 @@ namespace BookKatalogue
                 _bookCollection.GetCollection("Alle").AddBook(book);
             }
 
-            UpdateBookDataSource();
+            UpdateBookDataSource(_currentCollectionName);
             ResizeCollectionItems();
         }
 
-        public void UpdateBookDataSource()
+        public void UpdateBookDataSource(string collectionName)
         {
-            BindingList<Book> bindingList = new BindingList<Book>(_bookCollection.GetCollection("Alle").BookList);
+            BindingList<Book> bindingList = new BindingList<Book>(_bookCollection.GetCollection(collectionName).BookList);
             BindingSource bsBook = new BindingSource(bindingList, null);
             dgvBooks.DataSource = bsBook;
             // Spalte mit "Path" ausblenden! ... das sollte später aber via Column-Name implementiert werden.. sonst fällt einem das ewt. mal auf die Füße!
             dgvBooks.Columns[dgvBooks.ColumnCount - 1].Visible = false;
-
         }
 
         private void cbBookEdit_CheckedChanged(object sender, EventArgs e)
@@ -260,7 +272,7 @@ namespace BookKatalogue
 
             if (cbBookEdit.Checked)
             {
-                cbBookEdit.Text = "Abbrechen";
+                cbBookEdit.Text = "Fertig";
 
                 DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
                 checkBoxColumn.HeaderText = "";
@@ -272,6 +284,7 @@ namespace BookKatalogue
 
                 dgvBooks.ReadOnly = false;
                 btnDeleteBook.Visible = true;
+                btnMoveBook.Visible = true;
                 dgvBooks.MultiSelect = true;
 
                 foreach (DataGridViewColumn row in dgvBooks.Columns)
@@ -283,7 +296,7 @@ namespace BookKatalogue
                 }
 
                 dgvBooks.ReadOnly = false;
-                UpdateBookDataSource();
+                UpdateBookDataSource(_currentCollectionName);
             }
             else
             {
@@ -295,6 +308,7 @@ namespace BookKatalogue
                 }
 
                 btnDeleteBook.Visible = false;
+                btnMoveBook.Visible = false;
                 dgvBooks.MultiSelect = false;
             }
         }
@@ -302,7 +316,7 @@ namespace BookKatalogue
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
             string message = string.Empty;
-            CollectionItem ci = _bookCollection.GetCollection("Alle");
+            CollectionItem ci = _bookCollection.GetCollection(_currentCollectionName);
 
             List<string> deleteList = new List<string>();
             foreach (DataGridViewRow row in dgvBooks.Rows)
@@ -325,8 +339,14 @@ namespace BookKatalogue
                 ci.RemoveBook(bookName);
             }
 
-            UpdateBookDataSource();
+            UpdateBookDataSource(_currentCollectionName);
             ResizeCollectionItems();
+        }
+
+        private void btnMoveBook_Click(object sender, EventArgs e)
+        {
+            //TODO: schiebe die ausgewählten Bücher in eine "Collection"
+
         }
 
         private void dgvBooks_SelectionChanged(object sender, EventArgs e)
@@ -385,9 +405,7 @@ namespace BookKatalogue
 
                 BookReaderForm brf = new BookReaderForm(bookPath);
                 brf.Show();
-            }
-
-           
+            }           
         }
     }
 }

@@ -14,6 +14,12 @@ namespace BookKatalogue.controll
     public partial class CollectionItemControl : UserControl
     {
         private CollectionItem _item = null;
+        public CollectionItem CollectionItem
+        {
+            get { return _item;  }
+        }
+
+
 
         public CollectionItemControl(CollectionItem item)
         {
