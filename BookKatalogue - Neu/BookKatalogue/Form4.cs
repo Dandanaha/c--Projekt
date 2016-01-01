@@ -396,7 +396,7 @@ namespace BookKatalogue
 
 
                 //Get current Collection
-                CollectionItem collection = _bookCollection.GetCollection("Alle");
+                CollectionItem collection = _bookCollection.GetCollection(_currentCollectionName);
                 Book selectedBook = collection.BookList[i];                
                 string bookPath = selectedBook.Path;
 
