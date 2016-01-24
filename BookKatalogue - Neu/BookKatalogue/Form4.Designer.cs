@@ -74,6 +74,7 @@
             this.btnAddCollection = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBookEdit = new System.Windows.Forms.Panel();
+            this.btnMoveBook = new System.Windows.Forms.Button();
             this.cbBookEdit = new System.Windows.Forms.CheckBox();
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -85,7 +86,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
-            this.btnMoveBook = new System.Windows.Forms.Button();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -446,6 +446,17 @@
             this.pnlBookEdit.Size = new System.Drawing.Size(268, 34);
             this.pnlBookEdit.TabIndex = 10;
             // 
+            // btnMoveBook
+            // 
+            this.btnMoveBook.Location = new System.Drawing.Point(187, 6);
+            this.btnMoveBook.Name = "btnMoveBook";
+            this.btnMoveBook.Size = new System.Drawing.Size(75, 23);
+            this.btnMoveBook.TabIndex = 7;
+            this.btnMoveBook.Text = "move";
+            this.btnMoveBook.UseVisualStyleBackColor = true;
+            this.btnMoveBook.Visible = false;
+            this.btnMoveBook.Click += new System.EventHandler(this.btnMoveBook_Click);
+            // 
             // cbBookEdit
             // 
             this.cbBookEdit.Appearance = System.Windows.Forms.Appearance.Button;
@@ -560,6 +571,7 @@
             this.textBox1.Size = new System.Drawing.Size(202, 27);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Suche ...";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // panel3
@@ -625,17 +637,6 @@
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
-            // 
-            // btnMoveBook
-            // 
-            this.btnMoveBook.Location = new System.Drawing.Point(187, 6);
-            this.btnMoveBook.Name = "btnMoveBook";
-            this.btnMoveBook.Size = new System.Drawing.Size(75, 23);
-            this.btnMoveBook.TabIndex = 7;
-            this.btnMoveBook.Text = "move";
-            this.btnMoveBook.UseVisualStyleBackColor = true;
-            this.btnMoveBook.Visible = false;
-            this.btnMoveBook.Click += new System.EventHandler(this.btnMoveBook_Click);
             // 
             // collectionBindingSource
             // 

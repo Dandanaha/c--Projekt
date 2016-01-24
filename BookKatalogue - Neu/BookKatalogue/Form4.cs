@@ -220,7 +220,6 @@ namespace BookKatalogue
             abf.SetNewBookData(this, _bookCollection);
             abf.Show();
 
-
             //############Test###########
             //Book book = new Book();
             //book.Title = "Test";
@@ -231,7 +230,34 @@ namespace BookKatalogue
             //UpdateBookDataSource();
             //###########################
 
+            //UpdateBookDataSource("Alle");
             ResizeCollectionItems();
+        }
+
+        public void AddAddedBooksToLibrary()
+        {
+            for (int i = 0; i < _bookCollection.CollectionList.Count; i++)
+            {
+                if (_bookCollection.CollectionList[i].Name == "Alle")
+                    continue;
+
+                //Collection i - Bücherliste                
+                // List<Book> bookList = _bookCollection.GetCollection("Alle").BookList;
+                List<Book> bookList = _bookCollection.CollectionList[i].BookList;
+                for (int j = 0; j < bookList.Count; j++)
+                {
+                    if (!_bookCollection.CollectionList[0].BookList.Contains(bookList[j]))
+                    {
+                        _bookCollection.GetCollection("Alle").AddBook(bookList[j]);
+                    }
+                }
+            }
+        }
+
+        // sollte nur dann aufgerufen werden, wenn ein Buch aus der "Library" aka "Alle" gelöscht wird!!
+        public void RemoveDeletedBooksFromCollections()
+        {
+
         }
 
         private void bibForm_Load(object sender, EventArgs e)
@@ -336,7 +362,7 @@ namespace BookKatalogue
 
             foreach (string bookName in deleteList)
             {
-                ci.RemoveBook(bookName);
+                ci.RemoveBook(bookName/*, _currentCollectionName*/);
             }
 
             UpdateBookDataSource(_currentCollectionName);
@@ -406,6 +432,28 @@ namespace BookKatalogue
                 BookReaderForm brf = new BookReaderForm(bookPath);
                 brf.Show();
             }           
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {            
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvBooks.DataSource];
+            currencyManager1.SuspendBinding();
+
+            foreach (DataGridViewRow r in dgvBooks.Rows)
+            {
+                if((r.DataBoundItem as Book).Title.Contains(textBox1.Text) ||
+                    (r.DataBoundItem as Book).Author.Contains(textBox1.Text) ||
+                    (r.DataBoundItem as Book).Isbn.Contains(textBox1.Text))
+                {
+                    dgvBooks.Rows[r.Index].Visible = true;
+                }                        
+                else
+                {
+                    dgvBooks.Rows[r.Index].Visible = false;
+                }                        
+            }
+
+            currencyManager1.ResumeBinding();          
         }
     }
 }

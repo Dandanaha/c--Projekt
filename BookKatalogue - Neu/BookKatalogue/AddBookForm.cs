@@ -51,7 +51,10 @@ namespace BookKatalogue
             all.AddBook(book);
             _parentForm.ResizeCollectionItems();
             _parentForm.UpdateBookDataSource(_parentForm._currentCollectionName); // später sollte das nen public "Getter" bekommen...
-            
+
+            _parentForm.AddAddedBooksToLibrary();
+
+            _parentForm.ResizeCollectionItems();
             this.Close();
         }
 
