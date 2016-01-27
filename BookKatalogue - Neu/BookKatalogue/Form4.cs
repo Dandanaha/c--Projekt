@@ -24,6 +24,8 @@ namespace BookKatalogue
             Collection bookCollection = new Collection();
             _bookCollection = bookCollection;
             AddNewCollectionItemControlToList("Alle", false);
+
+            rbShowDataGridView.Checked = true;
         }
 
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,7 +38,6 @@ namespace BookKatalogue
 
             if (od.ShowDialog() == DialogResult.OK)
             {
-
                 filepath = od.FileName.ToString();
             }
         }
@@ -81,7 +82,11 @@ namespace BookKatalogue
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rbtnBücherInf.Checked)
+            {
+                this.dgvBooks.Visible = false;
+                this.listView.Visible = true;
+            }
 
             if (rbtnBücherInf.Checked)
             {
@@ -91,8 +96,6 @@ namespace BookKatalogue
             {
                 rbtnBücherInf.BackColor = Color.White;
             }
-
-
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -454,6 +457,15 @@ namespace BookKatalogue
             }
 
             currencyManager1.ResumeBinding();          
+        }
+
+        private void rbShowDataGridView_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbShowDataGridView.Checked)
+            {
+                this.listView.Visible = false;
+                this.dgvBooks.Visible = true;
+            }
         }
     }
 }

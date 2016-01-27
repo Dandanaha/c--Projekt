@@ -81,11 +81,12 @@
             this.btnAddBook = new System.Windows.Forms.Button();
             this.pnlViewChange = new System.Windows.Forms.Panel();
             this.rbtnBücherInf = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbShowDataGridView = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.listView = new System.Windows.Forms.ListView();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -518,7 +519,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlViewChange.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pnlViewChange.Controls.Add(this.rbtnBücherInf);
-            this.pnlViewChange.Controls.Add(this.radioButton2);
+            this.pnlViewChange.Controls.Add(this.rbShowDataGridView);
             this.pnlViewChange.Controls.Add(this.textBox1);
             this.pnlViewChange.Location = new System.Drawing.Point(188, 0);
             this.pnlViewChange.Name = "pnlViewChange";
@@ -542,20 +543,21 @@
             this.rbtnBücherInf.UseVisualStyleBackColor = true;
             this.rbtnBücherInf.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // rbShowDataGridView
             // 
-            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.radioButton2.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.radioButton2.Image = ((System.Drawing.Image)(resources.GetObject("radioButton2.Image")));
-            this.radioButton2.Location = new System.Drawing.Point(57, 3);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(35, 35);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbShowDataGridView.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbShowDataGridView.AutoSize = true;
+            this.rbShowDataGridView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rbShowDataGridView.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rbShowDataGridView.Image = ((System.Drawing.Image)(resources.GetObject("rbShowDataGridView.Image")));
+            this.rbShowDataGridView.Location = new System.Drawing.Point(57, 3);
+            this.rbShowDataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.rbShowDataGridView.Name = "rbShowDataGridView";
+            this.rbShowDataGridView.Size = new System.Drawing.Size(35, 35);
+            this.rbShowDataGridView.TabIndex = 2;
+            this.rbShowDataGridView.TabStop = true;
+            this.rbShowDataGridView.UseVisualStyleBackColor = true;
+            this.rbShowDataGridView.CheckedChanged += new System.EventHandler(this.rbShowDataGridView_CheckedChanged);
             // 
             // textBox1
             // 
@@ -590,6 +592,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.listView);
             this.panel4.Controls.Add(this.dgvBooks);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Location = new System.Drawing.Point(288, 29);
@@ -637,6 +640,17 @@
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
+            // 
+            // listView
+            // 
+            this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView.Location = new System.Drawing.Point(3, 42);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(901, 525);
+            this.listView.TabIndex = 10;
+            this.listView.UseCompatibleStateImageBehavior = false;
             // 
             // collectionBindingSource
             // 
@@ -725,7 +739,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlViewChange;
         private System.Windows.Forms.RadioButton rbtnBücherInf;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbShowDataGridView;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -741,5 +755,6 @@
         private System.Windows.Forms.Panel pnlBookEdit;
         private System.Windows.Forms.CheckBox cbBookEdit;
         private System.Windows.Forms.Button btnMoveBook;
+        private System.Windows.Forms.ListView listView;
     }
 }
