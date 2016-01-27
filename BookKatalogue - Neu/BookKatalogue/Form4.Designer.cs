@@ -85,8 +85,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.listView = new System.Windows.Forms.ListView();
+            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateimenuStrip.SuspendLayout();
@@ -600,6 +600,20 @@
             this.panel4.Size = new System.Drawing.Size(907, 570);
             this.panel4.TabIndex = 6;
             // 
+            // listView
+            // 
+            this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView.Location = new System.Drawing.Point(3, 42);
+            this.listView.MultiSelect = false;
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(901, 525);
+            this.listView.TabIndex = 10;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Tile;
+            this.listView.DoubleClick += new System.EventHandler(this.listView_DoubleClick);
+            // 
             // dgvBooks
             // 
             this.dgvBooks.AllowUserToAddRows = false;
@@ -640,17 +654,6 @@
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
-            // 
-            // listView
-            // 
-            this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView.Location = new System.Drawing.Point(3, 42);
-            this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(901, 525);
-            this.listView.TabIndex = 10;
-            this.listView.UseCompatibleStateImageBehavior = false;
             // 
             // collectionBindingSource
             // 

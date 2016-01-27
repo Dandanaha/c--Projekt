@@ -214,6 +214,7 @@ namespace BookKatalogue
             }
 
             dgvBooks.Refresh();
+            listView.Refresh();
         }
 
 
@@ -287,6 +288,30 @@ namespace BookKatalogue
             dgvBooks.DataSource = bsBook;
             // Spalte mit "Path" ausblenden! ... das sollte später aber via Column-Name implementiert werden.. sonst fällt einem das ewt. mal auf die Füße!
             dgvBooks.Columns[dgvBooks.ColumnCount - 1].Visible = false;
+
+
+            // ListView
+            listView.TileSize = new Size(160, 240);
+
+            ////TEEEEST
+            //var items = listView.Items;            
+            ////List<ListViewItem> lviItems =  items;
+            //foreach (var value in bsBook)
+            //{                
+            //    items.Add(((Book)value).Title);
+            //}
+
+                        
+            //TODO: ##################################################################################################
+            //ImageList myImageList = new ImageList();
+            ////using (Icon myIcon = new Icon("book.ico"))
+            //foreach (Book book in bsBook)
+            //{
+            //    Bitmap bookPicture = new Bitmap((book).Path);
+            //    myImageList.Images.Add(bookPicture);
+            //}
+            //myImageList.ImageSize = new Size(listView.TileSize.Width, listView.TileSize.Height);
+            //listView.LargeImageList = myImageList;
         }
 
         private void cbBookEdit_CheckedChanged(object sender, EventArgs e)
@@ -420,20 +445,8 @@ namespace BookKatalogue
                 int i = e.RowIndex;
                 if (i == -1)
                     return;
-                DataGridViewRow row = dgvBooks.Rows[i];
-                //row.Cells["checkBoxColumn"].Value = !Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
 
-
-                //Get current Collection
-                CollectionItem collection = _bookCollection.GetCollection(_currentCollectionName);
-                Book selectedBook = collection.BookList[i];                
-                string bookPath = selectedBook.Path;
-
-                if (bookPath.Length == 0)
-                    return;
-
-                BookReaderForm brf = new BookReaderForm(bookPath);
-                brf.Show();
+                ReadBook(i);
             }           
         }
 
@@ -467,5 +480,33 @@ namespace BookKatalogue
                 this.dgvBooks.Visible = true;
             }
         }
+
+        private void listView_DoubleClick(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems.Count < 1)
+                return;
+
+            ListViewItem selectedItem = listView.SelectedItems[0];
+            string itemName = selectedItem.ToString();
+            int itemIndex = selectedItem.Index;
+
+            ReadBook(itemIndex);
+        }
+
+        private void ReadBook(int itemIndex)
+        {
+            if (itemIndex == -1)
+                return;
+            CollectionItem collection = _bookCollection.GetCollection(_currentCollectionName);
+            Book selectedBook = collection.BookList[itemIndex];
+            string bookPath = selectedBook.Path;
+
+            if (bookPath.Length == 0)
+                return;
+
+            BookReaderForm brf = new BookReaderForm(bookPath);
+            brf.Show();
+        }
+
     }
 }
