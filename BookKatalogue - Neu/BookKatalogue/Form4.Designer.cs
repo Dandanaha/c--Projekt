@@ -35,24 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DateimenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.öffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SchließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.NsammoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.SItoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.GZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kopierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ausschneidenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inhaltsverzeichnisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anfangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seiteOderPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ansichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suchenmodusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -87,8 +70,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.listView = new System.Windows.Forms.ListView();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.speichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ladenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DateimenuStrip.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,7 +92,6 @@
             this.DateimenuStrip.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateimenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
-            this.GZToolStripMenuItem,
             this.ansichtToolStripMenuItem,
             this.formatToolStripMenuItem,
             this.hilfeToolStripMenuItem});
@@ -120,145 +104,21 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.öffnenToolStripMenuItem,
-            this.SchließenToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.NsammoolStripMenuItem,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.SItoolStripMenuItem,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8,
-            this.toolStripMenuItem9,
-            this.toolStripSeparator5,
+            this.speichernToolStripMenuItem,
+            this.ladenToolStripMenuItem,
             this.toolStripMenuItem4});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(53, 22);
             this.toolStripMenuItem2.Text = "Datei";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // öffnenToolStripMenuItem
-            // 
-            this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
-            this.öffnenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.öffnenToolStripMenuItem.Text = "Buch öffnen ";
-            this.öffnenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
-            // 
-            // SchließenToolStripMenuItem
-            // 
-            this.SchließenToolStripMenuItem.Name = "SchließenToolStripMenuItem";
-            this.SchließenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.SchließenToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.SchließenToolStripMenuItem.Text = "Buch schließen";
-            this.SchließenToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(286, 6);
-            // 
-            // NsammoolStripMenuItem
-            // 
-            this.NsammoolStripMenuItem.Name = "NsammoolStripMenuItem";
-            this.NsammoolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.NsammoolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.NsammoolStripMenuItem.Text = "Neue Sammlung";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(289, 22);
-            this.toolStripMenuItem5.Text = "Sammlung löschen";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(289, 22);
-            this.toolStripMenuItem6.Text = "Sammlung umbenennen";
-            // 
-            // SItoolStripMenuItem
-            // 
-            this.SItoolStripMenuItem.Name = "SItoolStripMenuItem";
-            this.SItoolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.SItoolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.SItoolStripMenuItem.Text = "Sammlung importieren";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(289, 22);
-            this.toolStripMenuItem7.Text = "Buch zu Sammlungn hinzufügen ";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(289, 22);
-            this.toolStripMenuItem8.Text = "Buch aus Sammlung entfernen";
-            // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(289, 22);
-            this.toolStripMenuItem9.Text = "PDF importieren";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(286, 6);
-            // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(289, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(189, 22);
             this.toolStripMenuItem4.Text = "Beenden";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.tsmiBeenden_Click);
-            // 
-            // GZToolStripMenuItem
-            // 
-            this.GZToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kopierenToolStripMenuItem,
-            this.ausschneidenToolStripMenuItem,
-            this.inhaltsverzeichnisToolStripMenuItem,
-            this.anfangToolStripMenuItem,
-            this.seiteOderPositionToolStripMenuItem});
-            this.GZToolStripMenuItem.Name = "GZToolStripMenuItem";
-            this.GZToolStripMenuItem.Size = new System.Drawing.Size(74, 22);
-            this.GZToolStripMenuItem.Text = "Gehe zu";
-            // 
-            // kopierenToolStripMenuItem
-            // 
-            this.kopierenToolStripMenuItem.Name = "kopierenToolStripMenuItem";
-            this.kopierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.L)));
-            this.kopierenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.kopierenToolStripMenuItem.Text = "Bibliotheken";
-            // 
-            // ausschneidenToolStripMenuItem
-            // 
-            this.ausschneidenToolStripMenuItem.Name = "ausschneidenToolStripMenuItem";
-            this.ausschneidenToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.ausschneidenToolStripMenuItem.Text = "Titelseite";
-            // 
-            // inhaltsverzeichnisToolStripMenuItem
-            // 
-            this.inhaltsverzeichnisToolStripMenuItem.Name = "inhaltsverzeichnisToolStripMenuItem";
-            this.inhaltsverzeichnisToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.inhaltsverzeichnisToolStripMenuItem.Text = "Inhaltsverzeichnis";
-            // 
-            // anfangToolStripMenuItem
-            // 
-            this.anfangToolStripMenuItem.Name = "anfangToolStripMenuItem";
-            this.anfangToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.anfangToolStripMenuItem.Text = "Anfang";
-            // 
-            // seiteOderPositionToolStripMenuItem
-            // 
-            this.seiteOderPositionToolStripMenuItem.Name = "seiteOderPositionToolStripMenuItem";
-            this.seiteOderPositionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.seiteOderPositionToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.seiteOderPositionToolStripMenuItem.Text = "Seite oder Position";
             // 
             // ansichtToolStripMenuItem
             // 
@@ -661,6 +521,13 @@
             this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
             // 
+            // speichernToolStripMenuItem
+            // 
+            this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
+            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.speichernToolStripMenuItem.Text = "Speichern";
+            this.speichernToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click_1);
+            // 
             // collectionBindingSource
             // 
             this.collectionBindingSource.DataSource = typeof(BookKatalogue.model.Collection);
@@ -668,6 +535,13 @@
             // bibFormBindingSource
             // 
             this.bibFormBindingSource.DataSource = typeof(BookKatalogue.model.Book);
+            // 
+            // ladenToolStripMenuItem
+            // 
+            this.ladenToolStripMenuItem.Name = "ladenToolStripMenuItem";
+            this.ladenToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.ladenToolStripMenuItem.Text = "Laden";
+            this.ladenToolStripMenuItem.Click += new System.EventHandler(this.ladenToolStripMenuItem_Click);
             // 
             // bibForm
             // 
@@ -712,12 +586,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.MenuStrip DateimenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem SchließenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem GZToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kopierenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ausschneidenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ansichtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suchenmodusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seitenansichtsmodulToolStripMenuItem;
@@ -725,18 +594,6 @@
         private System.Windows.Forms.ToolStripMenuItem geheZuLayoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LzToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem NsammoolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem SItoolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem inhaltsverzeichnisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anfangToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seiteOderPositionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aktuellistToolStrip;
         private System.Windows.Forms.ToolStripMenuItem autorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem titleToolStripMenuItem;
@@ -766,5 +623,7 @@
         private System.Windows.Forms.CheckBox cbBookEdit;
         private System.Windows.Forms.Button btnMoveBook;
         private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ToolStripMenuItem speichernToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ladenToolStripMenuItem;
     }
 }

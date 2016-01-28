@@ -38,8 +38,8 @@ namespace BookKatalogue.model
 
         public void SaveCollection(string fileName)
         {            
-            XmlSerializer SerializerObj = new XmlSerializer(typeof(Collection));            
-            TextWriter WriteFileStream = new StreamWriter(@"C:\" + fileName + ".xml");
+            XmlSerializer SerializerObj = new XmlSerializer(typeof(Collection));               
+            TextWriter WriteFileStream = new StreamWriter(fileName); // @"C:\" + fileName + ".xml"
             SerializerObj.Serialize(WriteFileStream, this);
             WriteFileStream.Close();
         }
@@ -47,9 +47,11 @@ namespace BookKatalogue.model
         public Collection LoadCollection(string fileName)
         {
             XmlSerializer SerializerObj = new XmlSerializer(typeof(Collection));
-            FileStream ReadFileStream = new FileStream(@"C:\" + fileName + ".xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            FileStream ReadFileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read); // @"C:\" + fileName + ".xml"
             Collection LoadedObj = (Collection)SerializerObj.Deserialize(ReadFileStream);
             ReadFileStream.Close();
+
+            _collectionList = LoadedObj.CollectionList;
 
             return LoadedObj;
         }

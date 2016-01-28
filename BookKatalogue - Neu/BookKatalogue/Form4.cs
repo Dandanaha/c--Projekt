@@ -268,16 +268,16 @@ namespace BookKatalogue
         private void bibForm_Load(object sender, EventArgs e)
         {
             //ein paar bücher hinzufügen
-            for (int i = 0; i < 5; i++)
-            {
-                Book book = new Book();
-                book.Title = "Test " + i;
-                book.Author = "Dan";
-                book.Isbn = "1234.5678.9098.7654";
-                book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
-                book.CoverPath = "C:\\Users\\Christopher\\Pictures\\motorrad inventar 3.png";
-                _bookCollection.GetCollection("Alle").AddBook(book);
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Book book = new Book();
+            //    book.Title = "Test " + i;
+            //    book.Author = "Dan";
+            //    book.Isbn = "1234.5678.9098.7654";
+            //    book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
+            //    book.CoverPath = "C:\\Users\\Christopher\\Pictures\\motorrad inventar 3.png";
+            //    _bookCollection.GetCollection("Alle").AddBook(book);
+            //}
 
             UpdateBookDataSource(_currentCollectionName);
             ResizeCollectionItems();
@@ -369,7 +369,7 @@ namespace BookKatalogue
             }
             else
             {
-                cbBookEdit.Text = "Bücher editieren";
+                cbBookEdit.Text = "editieren";
 
                 if (dgvBooks.Columns[0].Name == "checkBoxColumn")
                 {
@@ -541,5 +541,36 @@ namespace BookKatalogue
             brf.Show();
         }
 
+        private void speichernToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            String savePath = "";
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "XML files (*.xml)|*.xml";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                savePath = saveFileDialog.FileName;
+            }
+
+            if(savePath != "")
+                _bookCollection.SaveCollection(savePath);
+        }
+
+        private void ladenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String loadPath = "";
+            OpenFileDialog openFileDialoge = new OpenFileDialog();
+            openFileDialoge.Filter = "XML files (*.xml)|*.xml";
+            if (openFileDialoge.ShowDialog() == DialogResult.OK)
+            {
+                loadPath = openFileDialoge.FileName;
+            }
+
+            if (loadPath != "")
+            {
+                _bookCollection.LoadCollection(loadPath);
+                UpdateBookDataSource(_currentCollectionName);
+            }   
+        }
     }
 }
