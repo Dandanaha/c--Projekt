@@ -47,6 +47,7 @@ namespace BookKatalogue
             book.Author = tbAuthor.Text;
             book.Isbn = tbIsbn.Text;
             book.Path = tbPath.Text;
+            book.CoverPath = tbCoverPath.Text;
             CollectionItem all = _bookCollection.GetCollection(_parentForm._currentCollectionName);
             all.AddBook(book);
             _parentForm.ResizeCollectionItems();
@@ -67,6 +68,18 @@ namespace BookKatalogue
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.tbPath.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void btnChooseCover_Click(object sender, EventArgs e)
+        {
+            //TODO: Warum dauert das oft so extrem lang? (mehrere Sekunden...)      
+            //--> ich denke, das passiert nur beim Doppelklick auf das gewünschte Item!
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Png files (*.png)|*.png";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.tbCoverPath.Text = openFileDialog1.FileName;
             }
         }
     }

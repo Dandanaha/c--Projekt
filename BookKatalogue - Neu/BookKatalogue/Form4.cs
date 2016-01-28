@@ -86,6 +86,7 @@ namespace BookKatalogue
             {
                 this.dgvBooks.Visible = false;
                 this.listView.Visible = true;
+                UpdateBookDataSource(_currentCollectionName);
             }
 
             if (rbtnBücherInf.Checked)
@@ -274,6 +275,7 @@ namespace BookKatalogue
                 book.Author = "Dan";
                 book.Isbn = "1234.5678.9098.7654";
                 book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
+                book.CoverPath = "C:\\Users\\Christopher\\Pictures\\motorrad inventar 3.png";
                 _bookCollection.GetCollection("Alle").AddBook(book);
             }
 
@@ -290,28 +292,42 @@ namespace BookKatalogue
             dgvBooks.Columns[dgvBooks.ColumnCount - 1].Visible = false;
 
 
-            // ListView
+            #region ListView - LargeIcon
             listView.TileSize = new Size(160, 240);
+            
+            ImageList myImageList = new ImageList();
+            
+            foreach (Book book in bsBook)
+            {
+                if (book.CoverPath == null || book.CoverPath == "")
+                    continue;
+
+                Bitmap bookPicture = new Bitmap((book).CoverPath);
+                myImageList.Images.Add(bookPicture);
+            }
+            myImageList.ImageSize = new Size(listView.TileSize.Width, listView.TileSize.Height);           
+            listView.LargeImageList = myImageList;
+            
+            // Add column headers so the subitems will appear.
+            //ColumnHeader header = new ColumnHeader();            
+            //listView.Columns.Add(header);
+
+            listView.Items.Clear();
+            List<ListViewItem> listViewItems = new List<ListViewItem>();            
 
             ////TEEEEST
-            //var items = listView.Items;            
-            ////List<ListViewItem> lviItems =  items;
-            //foreach (var value in bsBook)
-            //{                
-            //    items.Add(((Book)value).Title);
-            //}
+            var items = listView.Items;            
+            for(int i = 0; i < bsBook.Count; i++)
+            {                
+                ListViewItem item = new ListViewItem(new string[]
+                {((Book)bsBook[i]).Title}, i);
+                
 
-                        
-            //TODO: ##################################################################################################
-            //ImageList myImageList = new ImageList();
-            ////using (Icon myIcon = new Icon("book.ico"))
-            //foreach (Book book in bsBook)
-            //{
-            //    Bitmap bookPicture = new Bitmap((book).Path);
-            //    myImageList.Images.Add(bookPicture);
-            //}
-            //myImageList.ImageSize = new Size(listView.TileSize.Width, listView.TileSize.Height);
-            //listView.LargeImageList = myImageList;
+                listViewItems.Add(item);
+            }
+
+            listView.Items.AddRange(listViewItems.ToArray());
+            #endregion
         }
 
         private void cbBookEdit_CheckedChanged(object sender, EventArgs e)

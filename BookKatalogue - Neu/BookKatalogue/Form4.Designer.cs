@@ -605,13 +605,19 @@
             this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView.Location = new System.Drawing.Point(3, 42);
+            this.listView.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.listView.BackgroundImageTiled = true;
+            this.listView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView.HideSelection = false;
+            this.listView.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.listView.Location = new System.Drawing.Point(3, 45);
+            this.listView.Margin = new System.Windows.Forms.Padding(1);
             this.listView.MultiSelect = false;
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(901, 525);
+            this.listView.Size = new System.Drawing.Size(901, 522);
             this.listView.TabIndex = 10;
             this.listView.UseCompatibleStateImageBehavior = false;
-            this.listView.View = System.Windows.Forms.View.Tile;
             this.listView.DoubleClick += new System.EventHandler(this.listView_DoubleClick);
             // 
             // dgvBooks

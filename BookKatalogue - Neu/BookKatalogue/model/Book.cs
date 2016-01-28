@@ -36,6 +36,13 @@ namespace BookKatalogue.model
             set { _path = value; }
         }
 
+        private string _coverPath;
+        public string CoverPath
+        {
+            get { return _coverPath; }
+            set { _coverPath = value; }
+        }
+
         public Book() { }
 
     }
