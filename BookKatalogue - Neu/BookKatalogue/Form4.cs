@@ -268,16 +268,16 @@ namespace BookKatalogue
         private void bibForm_Load(object sender, EventArgs e)
         {
             //ein paar bücher hinzufügen
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    Book book = new Book();
-            //    book.Title = "Test " + i;
-            //    book.Author = "Dan";
-            //    book.Isbn = "1234.5678.9098.7654";
-            //    book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
-            //    book.CoverPath = "C:\\Users\\Christopher\\Pictures\\motorrad inventar 3.png";
-            //    _bookCollection.GetCollection("Alle").AddBook(book);
-            //}
+            for (int i = 0; i < 5; i++)
+            {
+                Book book = new Book();
+                book.Title = "Test " + i;
+                book.Author = "Dan";
+                book.Isbn = "1234.5678.9098.7654";
+                book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
+                book.CoverPath = "C:\\Users\\Christopher\\Pictures\\motorrad inventar 3.png";
+                _bookCollection.GetCollection("Alle").AddBook(book);
+            }
 
             UpdateBookDataSource(_currentCollectionName);
             ResizeCollectionItems();
@@ -470,19 +470,37 @@ namespace BookKatalogue
             CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvBooks.DataSource];
             currencyManager1.SuspendBinding();
 
+            bool foundBooks = false;
+
+
             foreach (DataGridViewRow r in dgvBooks.Rows)
             {
-                if((r.DataBoundItem as Book).Title.Contains(textBox1.Text) ||
-                    (r.DataBoundItem as Book).Author.Contains(textBox1.Text) ||
-                    (r.DataBoundItem as Book).Isbn.Contains(textBox1.Text))
+                if ((String)cbSearchColumn.SelectedItem == "Titel")
+                {
+                    if ((r.DataBoundItem as Book).Title.Contains(textBox1.Text))
+                        foundBooks = true;
+                }
+                else if ((String)cbSearchColumn.SelectedItem == "Autor")
+                {
+                    if ((r.DataBoundItem as Book).Author.Contains(textBox1.Text))
+                        foundBooks = true;
+                }
+                else if ((String)cbSearchColumn.SelectedItem == "ISBN")
+                {
+                    if ((r.DataBoundItem as Book).Isbn.Contains(textBox1.Text))
+                        foundBooks = true;
+                }
+
+                if (foundBooks == true)
                 {
                     dgvBooks.Rows[r.Index].Visible = true;
-                }                        
+                    foundBooks = false;
+                }
                 else
                 {
                     dgvBooks.Rows[r.Index].Visible = false;
-                }                        
-            }
+                }
+            }           
 
             currencyManager1.ResumeBinding();          
         }
