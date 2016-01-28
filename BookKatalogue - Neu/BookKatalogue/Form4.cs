@@ -268,16 +268,16 @@ namespace BookKatalogue
         private void bibForm_Load(object sender, EventArgs e)
         {
             //ein paar bücher hinzufügen
-            for (int i = 0; i < 5; i++)
-            {
-                Book book = new Book();
-                book.Title = "Test " + i;
-                book.Author = "Dan";
-                book.Isbn = "1234.5678.9098.7654";
-                book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
-                book.CoverPath = "C:\\Users\\Christopher\\Pictures\\motorrad inventar 3.png";
-                _bookCollection.GetCollection("Alle").AddBook(book);
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Book book = new Book();
+            //    book.Title = "Test " + i;
+            //    book.Author = "Dan";
+            //    book.Isbn = "1234.5678.9098.7654";
+            //    book.Path = "C:\\Users\\Christopher\\SkyDrive\\Dokumente\\Christian_Shop_DB_Model.pdf";
+            //    book.CoverPath = "C:\\Users\\Christopher\\Pictures\\motorrad inventar 3.png";
+            //    _bookCollection.GetCollection("Alle").AddBook(book);
+            //}
 
             UpdateBookDataSource(_currentCollectionName);
             ResizeCollectionItems();
@@ -305,7 +305,7 @@ namespace BookKatalogue
                 Bitmap bookPicture = new Bitmap((book).CoverPath);
                 myImageList.Images.Add(bookPicture);
             }
-            myImageList.ImageSize = new Size(listView.TileSize.Width, listView.TileSize.Height);           
+            myImageList.ImageSize = new Size(160, listView.TileSize.Height);           
             listView.LargeImageList = myImageList;
             
             // Add column headers so the subitems will appear.
@@ -314,8 +314,7 @@ namespace BookKatalogue
 
             listView.Items.Clear();
             List<ListViewItem> listViewItems = new List<ListViewItem>();            
-
-            ////TEEEEST
+                        
             var items = listView.Items;            
             for(int i = 0; i < bsBook.Count; i++)
             {                
