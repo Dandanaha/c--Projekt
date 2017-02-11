@@ -13,11 +13,17 @@ namespace BookKatalogue.controll
 {
     public partial class CollectionItemControl : UserControl
     {
-        private CollectionItem item = null;
+        private CollectionItem _item = null;
+        public CollectionItem CollectionItem
+        {
+            get { return _item;  }
+        }
+
+
 
         public CollectionItemControl(CollectionItem item)
         {
-            this.item = item;        
+            this._item = item;        
             InitializeComponent();
         }
 
@@ -29,8 +35,13 @@ namespace BookKatalogue.controll
                 tbName.ReadOnly = true;                
                 tbName.SelectionLength = 0;
                 tbName.Enabled = false;
-                item.Name = tbName.Text;
+                _item.Name = tbName.Text;
             }                
+        }
+
+        public void RefreshBookCount()
+        {
+            this.lblBookCount.Text = _item.BookCount.ToString();
         }
     }
 }

@@ -35,11 +35,10 @@
             // lblBookCount
             // 
             this.lblBookCount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblBookCount.AutoSize = true;
             this.lblBookCount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookCount.Location = new System.Drawing.Point(185, 4);
+            this.lblBookCount.Location = new System.Drawing.Point(176, 4);
             this.lblBookCount.Name = "lblBookCount";
-            this.lblBookCount.Size = new System.Drawing.Size(18, 19);
+            this.lblBookCount.Size = new System.Drawing.Size(28, 19);
             this.lblBookCount.TabIndex = 1;
             this.lblBookCount.Text = "0";
             // 
